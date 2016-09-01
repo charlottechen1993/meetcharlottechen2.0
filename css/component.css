@@ -79,19 +79,10 @@ body {
 }
 
 .profile {
-	margin: 0 auto;
-	width: 140px;
-	height: 140px;
-/*	background: #47a3da;*/
+	width: 114px;
+	height: 63px;
+    border: 1px solid red;
 }
-
-/*
-.profile img {
-	max-width: 100%;
-	border-radius: 50%;
-	opacity: 0.6;
-}
-*/
 
 .intro-content h1 > span {
 	display: block;
