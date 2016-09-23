@@ -42,14 +42,19 @@
 
 		leftSide.querySelector( 'div.intro-content' ).addEventListener( eventtype, function( ev ) {
 			reset();
-			classie.add( splitlayout, 'open-left' );
-		} );
+            setTimeout(function(){
+                classie.add( splitlayout, 'open-left' );
+            }, 300);
+			
+		});
 
 		rightSide.querySelector( 'div.intro-content' ).addEventListener( eventtype, function( ev ) {
 			reset();
-			classie.add( splitlayout, 'open-right' );
-		} );
-
+            setTimeout(function(){
+                classie.add( splitlayout, 'open-right' );
+            }, 300);
+            
+		});
 		// back to intro
 		// after transition ends:
 		var onEndTransFn = function() {

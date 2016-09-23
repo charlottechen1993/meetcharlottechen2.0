@@ -1,11 +1,11 @@
 $('.intro-content').click(function() {
     $('.middle-block').animate({
         top: '-60%',
-    }, 700);
+    }, 600);
 });
 
 $('.back').click(function() {
     $('.middle-block').animate({
         top: '50%',
-    }, 700);
+    }, 800);
 });
