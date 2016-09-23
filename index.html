@@ -16,7 +16,7 @@
     <link type="text/css" rel="stylesheet" href="css/component.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     
-    <!--Import jQuery before materialize.js-->
+    <!--  JS  -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
@@ -48,7 +48,9 @@
                     <div class="overlay"></div>
                 </div>
             </div>
-            <!-- /intro -->
+            <!-------------------->
+            <!-- Portfolio Page -->
+            <!-------------------->
             <div class="page page-right" ng-controller="projectCtrl">
                 <div class="page-inner">
                     <section> 
@@ -57,20 +59,21 @@
                         </ul>
                     </section>
                 </div>
-                <!-- /page-inner -->
             </div>
-            <!-- /page-right -->
+            <!-------------------->
+            <!---- About Page ---->
+            <!-------------------->
             <div class="page page-left" ng-controller="aboutCtrl">
                 <div class="page-inner">
                     <section> 
-                        <p><ng-include src="'file/description.txt'"></ng-include></p>
+                        <div class="top-bar">
+                            <p><ng-include src="'file/description.txt'"></ng-include></p>
+                        </div>
                     </section>
                 </div>
-                <!-- /page-inner -->
             </div>
-            <!-- /page-left -->
         </div>
-        <!-- /splitlayout -->
+        <!-- Middle Row -->
         <div class="row">
             <div class="middle-block">
             <div class="block-content">
