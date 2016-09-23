@@ -179,9 +179,8 @@ body {
 .page-left {
 	left: 0;
 	outline: 5px solid white; /* avoid rounding gaps */
-	background: #34495e;
-	color: #fff;
-	text-align: right;
+/*	background: #34495e;*/
+	color: black;
 	-webkit-transform: translateX(-100%);
 	transform: translateX(-100%);
 }
@@ -207,7 +206,7 @@ body {
 
 .page-inner p {
 	font-weight: 300;
-	font-size: 1.2em;
+	font-size: 12px;
 }
 
 /* All transitions */
