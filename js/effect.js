@@ -1,6 +1,6 @@
 $('.intro-content').click(function() {
     $('.middle-block').animate({
-        top: '-60%',
+        top: '-100%',
     }, 600);
 });
 
