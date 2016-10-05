@@ -15,6 +15,8 @@
     <link type="text/css" rel="stylesheet" href="css/demo.css">
     <link type="text/css" rel="stylesheet" href="css/component.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/transitions.css">
+    <link type="text/css" rel="stylesheet" href="css/examples.css">
     
     <!--  JS  -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -53,7 +55,7 @@
             <!-------------------->
             <div class="page page-right" ng-controller="projectCtrl">
                 <div class="page-inner">
-                    <section> 
+                    <section class="Collage effect-parent"> 
                         <ul ng-repeat="cat in projects">
                             <li>{{cat.Name}}</li>
                         </ul>
@@ -90,6 +92,9 @@
         </div>
     </div>
     <script src="js/classie.js"></script>
+    <script src="js/jquery.collagePlus.js"></script>
+    <script src="js/jquery.collageCaption.js"></script>
+    <script src="js/jquery.removeWhitespace.js"></script>
     <script src="js/cbpSplitLayout.js"></script>
     <script type="text/javascript" src="js/effect.js"></script>
 </body>
