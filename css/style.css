@@ -238,19 +238,22 @@ a {
 }
 
 .title{
-    height: 100%;
+    display: inline-block;
     width: 10%;
 }
 
 .title h4{
-    top: 40%;
+    top: 20%;
     position: relative;
     text-align: center;
     font-weight: bold;
 }
 
+.img{
+    display: inline;
+}
 .description{
-    width: 40%l
+/*    width: 40%;*/
 }
 
 /*----------------------------*/
