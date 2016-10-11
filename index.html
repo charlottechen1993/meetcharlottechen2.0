@@ -15,6 +15,8 @@
     <link type="text/css" rel="stylesheet" href="css/demo.css">
     <link type="text/css" rel="stylesheet" href="css/component.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/examples.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/transitions.css" media="all" />
     
     <!--  JS  -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -23,6 +25,47 @@
     <script type="text/javascript" src="js/primaryCtrl.js"></script>
     <script type="text/javascript" src="js/aboutCtrl.js"></script>
     <script src="js/modernizr.custom.js"></script>
+    
+    <script src="jquery.collagePlus.js"></script>
+    <script src="extras/jquery.removeWhitespace.js"></script>
+    <script src="extras/jquery.collageCaption.js"></script>
+    <script type="text/javascript">
+
+    // All images need to be loaded for this plugin to work so
+    // we end up waiting for the whole window to load in this example
+    $(window).load(function () {
+        $('.intro-content-left').click(function(){
+            setTimeout(function(){
+                collage();
+                $('.Collage').collageCaption();
+            }, 800);
+        });
+    });
+
+
+    // Here we apply the actual CollagePlus plugin
+    function collage() {
+        $('.Collage').removeWhitespace().collagePlus(
+            {
+                'fadeSpeed'     : 2000,
+                'targetHeight'  : 200,
+                'effect'        : 'effect-3',
+                'direction'     : 'vertical'
+            }
+        );
+    };
+
+    // This is just for the case that the browser window is resized
+    var resizeTimer = null;
+    $(window).bind('resize', function() {
+        // hide all the images until we resize them
+        $('.Collage .Image_Wrapper').css("opacity", 0);
+        // set a timer to re-apply the plugin
+        if (resizeTimer) clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(collage, 200);
+    });
+
+    </script>
 </head>
 
 <body >
@@ -54,9 +97,17 @@
             <div class="page page-right" ng-controller="projectCtrl">
                 <div class="page-inner">
                     <section class="Collage effect-parent"> 
+<!--
                         <ul ng-repeat="cat in projects">
                             <li>{{cat.Name}}</li>
                         </ul>
+-->
+                        <div class="Image_Wrapper" data-caption="This is some data  <u>with</u>html in it">
+                            <a><img src="http://placehold.it/350x150/69D2E7/ffffff"></a>
+                        </div>
+                        <div class="Image_Wrapper" data-caption="This is some data  <u>with</u>html in it">
+                            <a><img src="http://placehold.it/350x150/69D2E7/ffffff"></a>
+                        </div>
                     </section>
                 </div>
             </div>
