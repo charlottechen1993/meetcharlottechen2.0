@@ -33,6 +33,22 @@ app.controller("portfolioCtrl", function($scope) {
             Title: "Formal",
             Category: "Layout",
             Image: "formal-2014.jpg"
+        },{
+            Title: "Bella Notte",
+            Category: "Layout",
+            Image: "bella-notte.jpg"
+        },{
+            Title: "A Girl",
+            Category: "Drawing",
+            Image: "portrait.jpg"
+        },{
+            Title: "A Girl",
+            Category: "Drawing",
+            Image: "portrait.jpg"
+        },{
+            Title: "A Girl",
+            Category: "Drawing",
+            Image: "portrait.jpg"
         }
     ]
     

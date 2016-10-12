@@ -15,11 +15,10 @@ $('.back').click(function() {
 var $grid = $('.grid').imagesLoaded(
     function(){
         $grid.isotope({
-//            layoutMode: 'fitRows',
             itemSelector: '.grid-item',
-            percentPosition: true,
+            layoutMode: 'masonry',
             masonry: {
-                columnWidth: '.grid-sizer'
+                columnWidth: '.grid-sizer',
             }
         });
         
