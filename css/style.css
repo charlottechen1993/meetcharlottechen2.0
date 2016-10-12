@@ -97,11 +97,7 @@ a {
 
 
 /*----------------------------*/
-
-
 /*------ NAV SQUARE -------*/
-
-
 /*----------------------------*/
 
 .nav-square-white {
@@ -252,8 +248,41 @@ a {
 .img{
     display: inline;
 }
-.description{
-/*    width: 40%;*/
+
+/*----------------------------*/
+/*------ Portfolio Page ------*/
+/*----------------------------*/
+.portfolio-menu{
+    display: inline-block;
+}
+
+.portfolio-menu-item{
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
 }
 
 /*----------------------------*/
