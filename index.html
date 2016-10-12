@@ -45,9 +45,11 @@
             <!-------------------->
             <div class="page page-right" ng-controller="portfolioCtrl">
                 <div class="page-inner">
-                    <ul class="portfolio-menu" ng-repeat="cat in categories">
-                        <li class="portfolio-menu-item" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">{{cat.Name}}</li>
-                    </ul>
+                    <div class="filter-bar">
+                        <ul class="portfolio-menu" ng-repeat="cat in categories">
+                            <li class="portfolio-menu-item" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">{{cat.Name}}</li>
+                        </ul>
+                    </div>
                     <section> 
                         <div class="grid">
                             <div class="grid-sizer"></div>

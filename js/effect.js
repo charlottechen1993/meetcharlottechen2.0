@@ -15,6 +15,7 @@ $('.back').click(function() {
 var $grid = $('.grid').imagesLoaded(
     function(){
         $grid.isotope({
+//            layoutMode: 'fitRows',
             itemSelector: '.grid-item',
             percentPosition: true,
             masonry: {
@@ -22,8 +23,12 @@ var $grid = $('.grid').imagesLoaded(
             }
         });
         
+        // filter based on project category
         $('.portfolio-menu').on('click', 'li', function() {         
             var filterValue = $(this).attr('data-filter');
-            $grid.isotope({ filter: '.'+filterValue });
+            if(filterValue == 'All')
+                $grid.isotope({ filter: '*'});
+            else
+                $grid.isotope({ filter: '.'+filterValue });
         });
     }); 

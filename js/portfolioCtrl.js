@@ -37,9 +37,6 @@ app.controller("portfolioCtrl", function($scope) {
     ]
     
     $scope.setCategoryName = function(cat){
-        if(cat=="All")
-            $scope.categoryName = "";
-        else
-            $scope.categoryName = cat;
+        $scope.categoryName = cat;
     }
 });
