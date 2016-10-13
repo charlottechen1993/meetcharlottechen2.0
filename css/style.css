@@ -4,10 +4,10 @@ h2,
 h3,
 h4,
 a {
-    font-family: 'Century Gothic', 'Muli', AppleGothic, sans-serif;
+/*    font-family: 'Century Gothic', 'Muli', AppleGothic, sans-serif;*/
     font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
 }
-
 
 /* WHITE WELCOME BOX */
 
@@ -138,128 +138,104 @@ a {
 /*-------- About Page --------*/
 /*----------------------------*/
 
-.diamond {
-    width: 50px;
-    height: 50px;
-    background: white;
-    border: 5px solid #d6d6d6;
-    border-radius: 20%;
-    background-clip: content-box;
-    /* Rotate */
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    /* Rotate Origin */
-    -webkit-transform-origin: 0 100%;
-    -moz-transform-origin: 0 100%;
-    -ms-transform-origin: 0 100%;
-    -o-transform-origin: 0 100%;
-    transform-origin: 0 100%;
-    margin: 50px 0 10px 50px;
-}
-
-.progressbar {
-    counter-reset: step;
-}
-
-.progressbar li {
-    list-style-type: none;
-    width: 25%;
-    float: left;
+#about-menu{
+    margin-top: 30px;
+    list-style: none;
     font-size: 12px;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
-    color: #7d7d7d;
 }
 
-.progressbar li:before {
-    width: 30px;
-    height: 30px;
-    content: counter(step);
-    counter-increment: step;
-    line-height: 30px;
-    border: 2px solid #7d7d7d;
-    display: block;
-    text-align: center;
-    margin: 0 auto 10px auto;
-    border-radius: 20%;
-    background-color: white;
-    /* Rotate */
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+#about-menu li{
+    margin-top: 2px;
 }
 
-.progressbar li:after {
-    width: 100%;
-    height: 2px;
-    content: '';
-    position: absolute;
-    background-color: #7d7d7d;
-    top: 15px;
-    left: -50%;
-    z-index: -1;
-}
-
-.progressbar li:first-child:after {
-    content: none;
-}
-
-.progressbar li.active {
-    color: green;
-}
-
-.progressbar li.active:before {
-    border-color: #55b776;
-}
-
-.progressbar li.active + li:after {
-    background-color: #55b776;
-}
-
-.art-board{
-    padding: 20px;
-    display: block;
-    height: 90vh;
-}
-
-.introduction{
-    height: 100%;
-    padding: 50px;
-}
-
-.title{
+#about-menu li:hover{
+    font-weight: bold;
+    color: #477b92;
+    cursor: pointer;
     display: inline-block;
-    width: 10%;
 }
 
-.title h4{
-    top: 20%;
-    position: relative;
-    text-align: center;
+.active-bar{
+    visibility:hidden;
+    height: 5px;
+    width: 15px;
+    display: inherit;
+    background-color: #477b92;
+}
+
+#main-bio-block{
+    width: 100%;
+    display: inline-flex;
+}
+
+#about-menu li:hover .active-bar{
+    visibility: visible;
+}
+
+#pic-bio{
+    width: 75%;
+    display: inline-block;
+}
+
+#about-propic{
+    width: 100%;
+}
+#bio-block{
+    display: inline-flex;
+    width: 100%;
+}
+#pic-bio h1{
+    font-weight: bolder;
+    color: #a5cccd;
+    margin-left: 30px;
+    font-size: 50px;
+    font-stretch: condensed;
+}
+#pic-bio p{
+    text-align: justify;
+}
+
+#brief-info-block{
+    display: inline-block;
+    width:25%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#brief-info-block table{
+    border-left: 6px solid #a5cccd;
+    padding-left: 5px;
+}
+
+#brief-info-block table td p:first-child{
+    margin-top: 0;
+}
+
+#brief-info-block table td p:last-child{
+    margin-bottom: 0;
+}
+
+#brief-info-block span{
     font-weight: bold;
 }
 
-.img{
-    display: inline;
+strong{
+    font-weight: bold !important;
 }
-
 /*----------------------------*/
 /*------ Portfolio Page ------*/
 /*----------------------------*/
-.filter-bar{
-    display: block;
+#filter-bar{
+    margin: 0;
     background: #545454;
     top:0;
+    left: 0;
+    right: 0;
+    position: fixed;
     width: 100%;
     height: 50px;
 /*    box-shadow: -5px 0 10px -5px #4B4B4B, 5px 0 10px -5px #4B4B4B;*/
-    z-index: 999;
+    z-index: 9999;
 }
 
 .portfolio-menu{

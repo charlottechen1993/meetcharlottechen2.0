@@ -1,2 +1,5 @@
-Hello, I'm Charlotte Chen, a senior double majoring in Computer Science and Economics at the University of Pittsburgh. 
-Since I was little, I have loved to create and draw comic stories and share them with my classmate, and when I was exposed to computer applications, I self-taught myself to make my comics into cartoons using Powerpoint and eventually Flash. With an equal passion for computer and art, I declared my major in computer science in college with special focus in web application and UI development. I found developing to be extremely similar to drawing; you start with a blank sheet of paper and the possibilities are limitless. The potential of creating something great constantly motivates me to develop and design more applications with clean and beautiful interfaces.
+Hello, I'm Charlotte Chen, a recent graduate of the University of Pittsburgh with a degree in Computer Sciences and in Economics. 
+
+Since I was little, I have loved to draw comic stories. Eventually I was exposed to computer softwares, and I began to turn my comics into animation cartoons using Powerpoint and eventually Flash. With an equal passion for computer and art, I declared my major in computer science with special focus in web application and UI development. 
+
+The idea of developing is same to drawing: you start with a blank space and the possibilities are limitless. The potential of creating something great constantly motivates me to develop more applications with beautiful and functional interfaces.

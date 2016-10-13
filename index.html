@@ -8,6 +8,7 @@
     <title>Home</title>
     
     <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <!-- CSS -->
@@ -40,12 +41,13 @@
                     <div class="overlay"></div>
                 </div>
             </div>
+            
             <!-------------------->
             <!-- Portfolio Page -->
             <!-------------------->
             <div class="page page-right" ng-controller="portfolioCtrl">
                 <div class="page-inner">
-                    <div class="filter-bar">
+                    <div id="filter-bar">
                         <ul class="portfolio-menu" ng-repeat="cat in categories">
                             <li class="portfolio-menu-item" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">{{cat.Name}}</li>
                         </ul>
@@ -65,31 +67,35 @@
             <div class="page page-left" ng-controller="aboutCtrl">
                 <div class="page-inner">
                     <section> 
-<!--
-                        <div class="top-bar">
-                            <p><ng-include src="'file/description.txt'"></ng-include></p>
-                        </div>
--->
-<!--
-                        <ul class="progressbar">
-                            <li>introduction</li>
-                            <li>skills</li>
-                            <li>experiences</li>
-                            <li>contact me</li>
+                        <ul id="about-menu">
+                            <li><div class="active-bar"></div>INTRODUCTION</li>
+                            <li><div class="active-bar"></div>SKILLS</li>
+                            <li><div class="active-bar"></div>EXPERIENCES</li>
+                            <li><div class="active-bar"></div>CONTACT ME</li>
                         </ul>
--->
-                        <div class="art-board">
-                            <div class="introduction">
-                                <div class="title">
-                                    <h4>About<br> Me</h4>
-                                    <div class="img">
-                                        <img src="img/pro-pic.jpg" style="width: 100%">
+                        <div id="main-bio-block">
+                            <div id="pic-bio">
+                                <img id="about-propic" src="img/pro-pic2.jpg">
+                                <div id="bio-block">
+                                    <div style="width: 25%; display: inline-block">
+                                        <h1>BIO</h1>
+                                    </div>
+                                    <div style="width: 75%; display: inline-block">
+                                        <p><ng-include src="'file/description.txt'"></ng-include></p>
                                     </div>
                                 </div>
-                                
-                                <div class="description">
-                                    <p><ng-include src="'file/description.txt'"></ng-include></p>
-                                </div>
+                            </div>
+                            <div id="brief-info-block">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <p><strong>Age: </strong> 23</p>
+                                            <p><strong>Occupation: </strong> Software Engineer</p>
+                                            <p><strong>Alma Mater: </strong> University of Pittsburgh</p>
+                                            <p><strong>Hobby: </strong>Drawing &amp Painting, Web Development, Graphic Design, Photography</p>
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
                     </section>
