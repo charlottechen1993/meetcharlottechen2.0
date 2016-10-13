@@ -139,13 +139,10 @@ a {
 /*----------------------------*/
 
 #about-menu{
-    margin-top: 30px;
+    margin-top: 20px;
     list-style: none;
-    font-size: 12px;
-}
-
-#about-menu li{
-    margin-top: 2px;
+    font-size: 13px;
+    margin-bottom: 15px;
 }
 
 #about-menu li:hover{
@@ -159,17 +156,16 @@ a {
     visibility:hidden;
     height: 5px;
     width: 15px;
-    display: inherit;
     background-color: #477b92;
-}
-
-#main-bio-block{
-    width: 100%;
-    display: inline-flex;
 }
 
 #about-menu li:hover .active-bar{
     visibility: visible;
+}
+
+#introduction-section{
+    width: 100%;
+    display: inline-flex;
 }
 
 #pic-bio{
@@ -179,7 +175,9 @@ a {
 
 #about-propic{
     width: 100%;
+    transition:all 1s ease;
 }
+
 #bio-block{
     display: inline-flex;
     width: 100%;

@@ -66,14 +66,26 @@
             <!-------------------->
             <div class="page page-left" ng-controller="aboutCtrl">
                 <div class="page-inner">
+                    <table id="about-menu">
+                        <tr>
+                            <td><div class="active-bar"></div></td>
+                            <td><li id="introduction-li" class="about-li active-li">INTRODUCTION</li></td>
+                        </tr>
+                        <tr>
+                            <td><div class="active-bar"></div></td>
+                            <td><li id="skills-li" class="about-li">SKILLS</li></td>
+                        </tr>
+                        <tr>
+                            <td><div class="active-bar"></div></td>
+                            <td><li id="experiences-li" class="about-li">EXPERIENCES</li></td>
+                        </tr>
+                        <tr>
+                            <td><div class="active-bar"></div></td>
+                            <td><li id="contact-li" class="about-li">CONTACT ME</li></td>
+                        </tr>
+                    </table>
                     <section> 
-                        <ul id="about-menu">
-                            <li><div class="active-bar"></div>INTRODUCTION</li>
-                            <li><div class="active-bar"></div>SKILLS</li>
-                            <li><div class="active-bar"></div>EXPERIENCES</li>
-                            <li><div class="active-bar"></div>CONTACT ME</li>
-                        </ul>
-                        <div id="main-bio-block">
+                        <div id="introduction-section" class="active-section">
                             <div id="pic-bio">
                                 <img id="about-propic" src="img/pro-pic2.jpg">
                                 <div id="bio-block">
@@ -97,6 +109,15 @@
                                     </tr>
                                 </table>
                             </div>
+                        </div>
+                        <div id="skills-section" style="visibility: hidden">
+                            <h1>This is Skill</h1>
+                        </div>
+                        <div id="experiences-section" style="visibility: hidden">
+                            <h1>This is Experience</h1>
+                        </div>
+                        <div class="contact-section" style="visibility: hidden">
+                            <h1>This is Contact</h1>
                         </div>
                     </section>
                 </div>
