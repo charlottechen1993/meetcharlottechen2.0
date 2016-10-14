@@ -359,7 +359,7 @@ input:-webkit-autofill {
 
 .grid-sizer,
 .grid-item {
-    width: 33.333%;
+    width: 25%;
 }
 
 .grid-item {
