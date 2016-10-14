@@ -159,12 +159,16 @@ a {
     background-color: #477b92;
 }
 
+.active-li{
+    display: inline-flex;
+    font-weight: bold;
+    color: #477b92;
+}
+
 #about-menu li:hover .active-bar{
     visibility: visible;
 }
-
-#introduction-section{
-    width: 100%;
+.active-section{
     display: inline-flex;
 }
 

@@ -33,20 +33,33 @@ var $grid = $('.grid').imagesLoaded(
         });
     }); 
 
-// About pages load
+// -------------------
+// ABOUT PAGE SHIFTING
+// -------------------
+
+var activeLiId = 'introduction-li'; // global var tracking current active tab
 $(".about-li").click(function(){
     var newSectionLi = $(this).attr('id');
     var newSection = newSectionLi.replace('li', 'section');
     
     // if clicked li isn't current active section
     if ($(this).hasClass('active-li')==false){
-        //remove current active section view
-        $("section").empty();
-        //set new section's li to active
+        //remove old active li's css
+        var oldActiveSection = activeLiId.replace('li', 'section');
+        $('#' + activeLiId).css({'font-weight': 'normal', 'color':'black'});
+        $('#' + activeLiId).removeClass('active-li');
+        // set old active section to inactive and invisible 
+        $('#' + oldActiveSection).removeClass('active-section');
+        $('#' + oldActiveSection).css("display", "none");
+        
+        // set new active section's li to active
+        activeLiId = newSectionLi;
+        $('#' + newSectionLi).removeAttr('style');
         $(this).addClass("active-li");
-        alert($(this).attr('class'));
-        $(this).css('font-weight', 'bold')
-        $('#' + newSection).css("visibility", "visible");
+        
+        // set new active section to be active and visible
+        $('#' + newSection).removeAttr('style');
+        $('#' + newSection).addClass('active-section');
     }
 });
     
