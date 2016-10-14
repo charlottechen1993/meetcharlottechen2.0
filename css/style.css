@@ -227,13 +227,13 @@ a {
 
 strong{
     font-weight: bold !important;
+    color: #497B90;
 }
 
 /* ---------- */
 /* CONTACT ME */
 /* ---------- */
 #contact-section{
-/*    padding: 20px;*/
     float: left;
 }
 
@@ -254,21 +254,29 @@ strong{
 }
 
 .form-control{
-    background-color: #A6CCCC;
-    opacity: 0.4;
+    background-color: #E8F3F3;
     border: none;
     border-radius: 0;
-    color: black;
+    color: #646464;
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
     font-size: 13px;
+}
+
+label{
+    font-size: 14px;
+    color: #76A5A5;
+    font-weight: 600;
 }
 
 .form-control::-webkit-input-placeholder { color: black; }
 .form-control:-moz-placeholder { color: black; }
 .form-control::-moz-placeholder { color: black; }
 .form-control:-ms-input-placeholder { color: black; }
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #E8F3F3 inset !important;
+}
 
 .btn-email{
     background-color: #A6CCCC;
@@ -303,6 +311,9 @@ strong{
     outline: 0 none;
 }
     
+#contact-section .social-icons{
+    width: 8%;
+}
     
 /*----------------------------*/
 /*------ Portfolio Page ------*/
