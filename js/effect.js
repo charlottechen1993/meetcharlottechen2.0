@@ -8,6 +8,7 @@ $('.intro-content').click(function() {
     }, 600);
 });
 
+
 // return to homepage
 $('.back').click(function() {
     $('.middle-block').animate({
@@ -39,10 +40,10 @@ var $grid = $('.grid').imagesLoaded(
         });
     }); 
 
+
 // -------------------
 // ABOUT PAGE SHIFTING
 // -------------------
-
 var activeLiId = 'introduction-li'; // global var tracking current active tab
 $(".about-li").click(function(){
     var newSectionLi = $(this).attr('id');
@@ -68,4 +69,11 @@ $(".about-li").click(function(){
         $('#' + newSection).addClass('active-section');
     }
 });
-    
+
+// ---------------------------
+// Introduction Load Animation
+// ---------------------------
+$("#introduction-li").click(function(){
+    $("#about-propic").animate({left:0}, 600);
+    $("#brief-info-block").delay(100).animate({right:0}, 1000);
+});

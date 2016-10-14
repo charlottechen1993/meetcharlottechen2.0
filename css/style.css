@@ -139,20 +139,20 @@ a {
 /*----------------------------*/
 
 /* ------------ */
-/* INTRODUCTION */
+/*     MENU     */
 /* ------------ */
 #about-menu{
     margin-top: 20px;
     list-style: none;
     font-size: 13px;
     margin-bottom: 15px;
+    margin-left: 0;
 }
 
-#about-menu li:hover{
+#about-menu tr:hover{
     font-weight: bold;
     color: #477b92;
     cursor: pointer;
-    display: inline-block;
 }
 
 .active-bar{
@@ -172,10 +172,13 @@ a {
     display: inline-flex;
 }
 
-#about-menu li:hover .active-bar{
+#about-menu tr:hover .active-bar{
     visibility: visible;
 }
 
+/* ------------ */
+/*     INTRO    */
+/* ------------ */
 #pic-bio{
     width: 75%;
     display: inline-block;
@@ -183,7 +186,8 @@ a {
 
 #about-propic{
     width: 100%;
-    transition:all 1s ease;
+    position:relative;
+    left: -100%;
 }
 
 #bio-block{
@@ -206,6 +210,8 @@ a {
     width:25%;
     padding-left: 20px;
     padding-right: 20px;
+    right: -100%;
+    position: relative;
 }
 
 #brief-info-block table{
