@@ -138,6 +138,9 @@ a {
 /*-------- About Page --------*/
 /*----------------------------*/
 
+/* ------------ */
+/* INTRODUCTION */
+/* ------------ */
 #about-menu{
     margin-top: 20px;
     list-style: none;
@@ -165,11 +168,12 @@ a {
     color: #477b92;
 }
 
-#about-menu li:hover .active-bar{
-    visibility: visible;
-}
 .active-section{
     display: inline-flex;
+}
+
+#about-menu li:hover .active-bar{
+    visibility: visible;
 }
 
 #pic-bio{
@@ -224,6 +228,82 @@ a {
 strong{
     font-weight: bold !important;
 }
+
+/* ---------- */
+/* CONTACT ME */
+/* ---------- */
+#contact-section{
+/*    padding: 20px;*/
+    float: left;
+}
+
+#left-contact, #right-contact{
+   padding: 20px;
+}
+
+#right-contact{
+    align-self: flex-end;
+}
+
+#right-contact p strong{
+    color: #497B90;
+}
+
+.form-control:focus{
+    outline: 0;
+}
+
+.form-control{
+    background-color: #A6CCCC;
+    opacity: 0.4;
+    border: none;
+    border-radius: 0;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.form-control::-webkit-input-placeholder { color: black; }
+.form-control:-moz-placeholder { color: black; }
+.form-control::-moz-placeholder { color: black; }
+.form-control:-ms-input-placeholder { color: black; }
+
+.btn-email{
+    background-color: #A6CCCC;
+    color: white;
+    width: 30%;
+    height: 40px;
+    border-radius: 0;
+    position: inherit;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border: none;
+    font-size: 15px;
+}
+
+.btn-email:focus, 
+.btn-email:active, 
+.btn-email:hover, 
+.btn-email.active, 
+.btn-email.active, 
+.open > .dropdown-toggle.btn-email{
+    background: #8BBCBB;
+    color: white;
+    box-shadow: none;
+    outline: 0 none;
+    cursor: pointer;
+}
+
+.btn-email:active:focus{
+    background: #8BBCBB;
+    color: white;
+    box-shadow: none;
+    outline: 0 none;
+}
+    
+    
 /*----------------------------*/
 /*------ Portfolio Page ------*/
 /*----------------------------*/

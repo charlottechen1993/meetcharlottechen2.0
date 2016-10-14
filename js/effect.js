@@ -1,3 +1,6 @@
+// -------------------------------
+// HOMEPAGE MIDDLE BLOCK ANIMATION
+// -------------------------------
 // load content page
 $('.intro-content').click(function() {
     $('.middle-block').animate({
@@ -12,6 +15,9 @@ $('.back').click(function() {
     }, 800);
 });
 
+// -------------------
+// PORTFOLIO PAGE LOAD
+// -------------------
 //initialize Isotope after all images have been loaded.
 var $grid = $('.grid').imagesLoaded(
     function(){
