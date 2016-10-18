@@ -169,7 +169,7 @@ a {
 }
 
 .active-section{
-    display: inline-flex;
+/*    display: inline-flex;*/
 }
 
 #about-menu tr:hover .active-bar{

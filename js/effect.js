@@ -5,7 +5,8 @@
 $('.intro-content').click(function() {
     $('.middle-block').animate({
         top: '-100%',
-    }, 600);
+        easing: 'swing',
+    }, 800);
 });
 
 
@@ -13,7 +14,8 @@ $('.intro-content').click(function() {
 $('.back').click(function() {
     $('.middle-block').animate({
         top: '50%',
-    }, 800);
+        easing: 'swing',
+    }, 1000);
 });
 
 // -------------------
@@ -74,6 +76,13 @@ $(".about-li").click(function(){
 // Introduction Load Animation
 // ---------------------------
 $("#introduction-li").click(function(){
-    $("#about-propic").animate({left:0}, 600);
-    $("#brief-info-block").delay(100).animate({right:0}, 1000);
+    $("#about-propic").animate({
+        left: ["0", 'easeInOutBack'],
+        duration: 'slow',
+    }, 1200);
+    $("#brief-info-block").delay(100).animate({
+        right:0, 
+        easing: 'easeInOutBack',
+        duration: 'slow',
+    }, 1000);
 });

@@ -44,7 +44,7 @@
 			reset();
             setTimeout(function(){
                 classie.add( splitlayout, 'open-left' );
-            }, 300);
+            }, 500);
 			
 		});
 
@@ -52,7 +52,7 @@
 			reset();
             setTimeout(function(){
                 classie.add( splitlayout, 'open-right' );
-            }, 300);
+            }, 500);
             
 		});
 		// back to intro
