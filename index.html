@@ -21,6 +21,24 @@
 <body>
     <div class="container">
         <div id="splitlayout" class="splitlayout">
+            <table id="about-menu">
+                <tr>
+                    <td><div class="active-bar"></div></td>
+                    <td><li id="introduction-li" class="about-li active-li">INTRODUCTION</li></td>
+                </tr>
+                <tr>
+                    <td><div class="active-bar"></div></td>
+                    <td><li id="skills-li" class="about-li">SKILLS</li></td>
+                </tr>
+                <tr>
+                    <td><div class="active-bar"></div></td>
+                    <td><li id="experiences-li" class="about-li">EXPERIENCES</li></td>
+                </tr>
+                <tr>
+                    <td><div class="active-bar"></div></td>
+                    <td><li id="contact-li" class="about-li">CONTACT ME</li></td>
+                </tr>
+            </table>
             <div class="intro">
                 <div class="side side-left">
                     <div class="intro-content intro-content-right">
@@ -66,24 +84,7 @@
             <!-------------------->
             <div class="page page-left" ng-controller="aboutCtrl">
                 <div class="page-inner">
-                    <table id="about-menu">
-                        <tr>
-                            <td><div class="active-bar"></div></td>
-                            <td><li id="introduction-li" class="about-li active-li">INTRODUCTION</li></td>
-                        </tr>
-                        <tr>
-                            <td><div class="active-bar"></div></td>
-                            <td><li id="skills-li" class="about-li">SKILLS</li></td>
-                        </tr>
-                        <tr>
-                            <td><div class="active-bar"></div></td>
-                            <td><li id="experiences-li" class="about-li">EXPERIENCES</li></td>
-                        </tr>
-                        <tr>
-                            <td><div class="active-bar"></div></td>
-                            <td><li id="contact-li" class="about-li">CONTACT ME</li></td>
-                        </tr>
-                    </table>
+                    
                     <section> 
                         <!--------------------->
                         <!--  INTRODUCTION   -->
@@ -117,31 +118,33 @@
                         <!--     SKILLS      -->
                         <!--------------------->
                         <div id="skills-section" style="display: none">
-                            <h1>This is Skill</h1>
                             <div id="skills">
-                              <div id="apps">
-                                <p>Photoshop</p>
-                                <p>Illustrator</p>
-                                <p>Web Design</p>
-                              </div>
-
-                              <div class="grid">
-                                <div class="bar pct-75"><div class="inner"></div>   </div>
-                                <div class="bar pct-50"><div class="inner"></div>    </div>
-                                <div class="bar pct-90"><div class="inner"></div>    </div>
-
-                                <div class="v-divider one"></div>
-                                <div class="v-divider two"></div>
-                                <div class="v-divider three"></div>
-
-                                <div id="scale">
-                                  <p class="zero">0%</p>
-                                  <p class="one">25%</p>
-                                  <p class="two">50%</p>
-                                  <p class="three">75%</p>
-                                  <p class="four">100%</p>
+                                <div id="apps">
+                                    <p>Photoshop</p>
+                                    <p>Illustrator</p>
+                                    <p>Web Design</p>
                                 </div>
-                              </div>
+                                <div class="grid-bar">
+                                    <div class="bar pct-75">
+                                        <div class="inner"></div>
+                                    </div>
+                                    <div class="bar pct-50">
+                                        <div class="inner"></div>
+                                    </div>
+                                    <div class="bar pct-90">
+                                        <div class="inner"></div>
+                                    </div>
+                                    <div class="v-divider one"></div>
+                                    <div class="v-divider two"></div>
+                                    <div class="v-divider three"></div>
+                                    <div id="scale">
+                                        <p class="zero">Beginner</p>
+                                        <p class="one">Familiar</p>
+                                        <p class="two">Proficient</p>
+                                        <p class="three">Expert</p>
+                                        <p class="four">Master</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!--------------------->

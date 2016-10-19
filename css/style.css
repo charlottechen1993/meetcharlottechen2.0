@@ -147,6 +147,9 @@ a {
     font-size: 13px;
     margin-bottom: 15px;
     margin-left: 0;
+    position:fixed;
+    display: none;
+    z-index: 999;
 }
 
 #about-menu tr:hover{
@@ -169,7 +172,8 @@ a {
 }
 
 .active-section{
-/*    display: inline-flex;*/
+    display: inline-flex;
+    width: 100%;
 }
 
 #about-menu tr:hover .active-bar{
@@ -236,6 +240,9 @@ strong{
     color: #497B90;
 }
 
+#skills-section{
+    padding: 10px;
+}
 /* ---------- */
 /* CONTACT ME */
 /* ---------- */
@@ -258,6 +265,18 @@ strong{
 .form-control:focus{
     outline: 0;
 }
+
+/*
+.circle{
+    position:fixed;
+    top:0;
+    left:0;
+    background: red;
+    width:200px;
+    height: 200px;
+    display: block;
+}
+*/
 
 .form-control{
     background-color: #E8F3F3;

@@ -9,6 +9,12 @@ $('.intro-content').click(function() {
     }, 800);
 });
 
+$(".intro-content-right").click(function(){
+    setTimeout(function(){
+        $("#about-menu").show();
+    }, 1000);
+});
+
 
 // return to homepage
 $('.back').click(function() {
@@ -16,6 +22,7 @@ $('.back').click(function() {
         top: '50%',
         easing: 'swing',
     }, 1000);
+    $("#about-menu").hide();
 });
 
 // -------------------
