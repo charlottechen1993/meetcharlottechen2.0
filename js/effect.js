@@ -59,9 +59,14 @@ $(".menu-bubble").click(function(){
     var newSection = newSectionBubbleId.replace('bubble', 'section');
     
     // scroll selected div into view
-     $('html, body').animate({
+    $('html, body').animate({
         scrollTop: $("#" + newSection).offset().top
     }, 500);
+    
+    if($(this).attr('id')=='skills-bubble'){
+        $('#bar-chart').removeAttr('style');
+        $('#bar-chart').css('display', 'block');
+    }
         
     // if clicked li isn't current active section
     if ($(this).hasClass('active-bubble')==false){
