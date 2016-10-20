@@ -137,6 +137,9 @@ a {
 /*----------------------------*/
 /*-------- About Page --------*/
 /*----------------------------*/
+.about-section{
+    margin-bottom: 60px;
+}
 
 /* ------------ */
 /*     MENU     */
@@ -172,7 +175,7 @@ a {
 }
 
 .active-section{
-    display: inline-flex;
+/*    display: inline-flex;*/
     width: 100%;
 }
 
@@ -242,12 +245,14 @@ strong{
 
 #skills-section{
     padding: 10px;
+    display: flex;
 }
 /* ---------- */
 /* CONTACT ME */
 /* ---------- */
 #contact-section{
     float: left;
+    display: flex;
 }
 
 #left-contact, #right-contact{

@@ -21,6 +21,7 @@
 <body>
     <div class="container">
         <div id="splitlayout" class="splitlayout">
+            <!-- About Page Menu -->
             <table id="about-menu">
                 <tr>
                     <td><div class="active-bar"></div></td>
@@ -84,12 +85,13 @@
             <!-------------------->
             <div class="page page-left" ng-controller="aboutCtrl">
                 <div class="page-inner">
-                    
                     <section> 
                         <!--------------------->
                         <!--  INTRODUCTION   -->
                         <!--------------------->
-                        <div id="introduction-section" class="active-section">
+                        <div id="introduction-section" class="active-section about-section">
+                            <img src="img/about-background.JPG" style="width: 100%; height: auto">
+<!--
                             <div id="pic-bio">
                                 <img id="about-propic" src="img/pro-pic2.jpg">
                                 <div id="bio-block">
@@ -113,11 +115,12 @@
                                     </tr>
                                 </table>
                             </div>
+-->
                         </div>
                         <!--------------------->
                         <!--     SKILLS      -->
                         <!--------------------->
-                        <div id="skills-section" style="display: none">
+                        <div id="skills-section" class="about-section">
                             <div id="skills">
                                 <div id="apps">
                                     <p>Photoshop</p>
@@ -150,14 +153,13 @@
                         <!--------------------->
                         <!--   EXPERIENCES   -->
                         <!--------------------->
-                        <div id="experiences-section" style="display: none">
+                        <div id="experiences-section" class="about-section">
                             <h1>This is Experience</h1>
-                            
                         </div>
                         <!--------------------->
                         <!--   CONTACT ME    -->
                         <!--------------------->
-                        <div id="contact-section" style="display: none">
+                        <div id="contact-section" class="about-section">
                             <div id="left-contact" style="width: 65%">
                                 <form action="/contact" method="post">
                                     <div class="form-group">
