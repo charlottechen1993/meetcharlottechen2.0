@@ -145,42 +145,117 @@ a {
 /*     MENU     */
 /* ------------ */
 #about-menu{
-    margin-top: 20px;
-    list-style: none;
+    margin-top: 30px;
     font-size: 13px;
-    margin-bottom: 15px;
-    margin-left: 0;
+    right:150px;
     position:fixed;
     display: none;
     z-index: 999;
 }
 
-#about-menu tr:hover{
-    font-weight: bold;
-    color: #477b92;
-    cursor: pointer;
-}
-
-.active-bar{
-    visibility:hidden;
-    height: 5px;
-    width: 15px;
-    background-color: #477b92;
-}
-
-.active-li{
-    display: inline-flex;
-    font-weight: bold;
-    color: #477b92;
-}
-
 .active-section{
-/*    display: inline-flex;*/
     width: 100%;
 }
 
-#about-menu tr:hover .active-bar{
-    visibility: visible;
+.menu-bubble{
+    border-radius: 50%;
+    background: #71a5a7;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    margin-left: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.menu-bubble:hover,
+.menu-bubble:focus,
+.menu-bubble:active{
+    background: #478588;
+}
+
+.menu-bubble span{
+    top: 80%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: -22px;
+    color: white;
+    position:relative;
+    display: table;
+}
+
+.ripple-effect{
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select: none;
+}
+
+.ink{
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+
+    background: #fff;
+    opacity: 1;
+}
+
+.ink.animate {
+    -webkit-animation: ripple .5s linear;
+    -moz-animation: ripple .5s linear;
+    -ms-animation: ripple .5s linear;
+    -o-animation: ripple .5s linear;
+    animation: ripple .5s linear;
+}
+
+@keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(2.5);
+    }
+}
+@-webkit-keyframes ripple {
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2.5);
+        transform: scale(2.5);
+    }
+}
+
+@-moz-keyframes ripple {
+    100% {
+        opacity: 0;
+        -moz-transform: scale(2.5);
+        transform: scale(2.5);
+    }
+}
+
+@-ms-keyframes ripple {
+    100% {
+        opacity: 0;
+        -ms-transform: scale(2.5);
+        transform: scale(2.5);
+    }
+}
+
+@-o-keyframes ripple {
+    100% {
+        opacity: 0;
+        -o-transform: scale(2.5);
+        transform: scale(2.5);
+    }
 }
 
 /* ------------ */
@@ -270,18 +345,6 @@ strong{
 .form-control:focus{
     outline: 0;
 }
-
-/*
-.circle{
-    position:fixed;
-    top:0;
-    left:0;
-    background: red;
-    width:200px;
-    height: 200px;
-    display: block;
-}
-*/
 
 .form-control{
     background-color: #E8F3F3;

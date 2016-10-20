@@ -16,30 +16,31 @@
     <link type="text/css" rel="stylesheet" href="css/component.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bar.css">
 </head>
 <body>
     <div class="container">
         <div id="splitlayout" class="splitlayout">
             <!-- About Page Menu -->
-            <table id="about-menu">
-                <tr>
-                    <td><div class="active-bar"></div></td>
-                    <td><li id="introduction-li" class="about-li active-li">INTRODUCTION</li></td>
-                </tr>
-                <tr>
-                    <td><div class="active-bar"></div></td>
-                    <td><li id="skills-li" class="about-li">SKILLS</li></td>
-                </tr>
-                <tr>
-                    <td><div class="active-bar"></div></td>
-                    <td><li id="experiences-li" class="about-li">EXPERIENCES</li></td>
-                </tr>
-                <tr>
-                    <td><div class="active-bar"></div></td>
-                    <td><li id="contact-li" class="about-li">CONTACT ME</li></td>
-                </tr>
-            </table>
+            <div id="about-menu">
+                <div class="menu-bubble ripple-effect active-bubble" id="intro-bubble">
+                    <span class="fa fa-user fa-lg"></span>
+                    <span class="ink animate"></span>
+                </div>
+                <div class="menu-bubble ripple-effect" id="skills-bubble">
+                    <span class="fa fa-code fa-lg"></span>
+                    <span class="ink animate"></span>
+                </div>
+                <div class="menu-bubble ripple-effect" id="experiences-bubble">
+                    <span class="fa fa-briefcase fa-lg"></span>
+                    <span class="ink animate"></span>
+                </div>
+                <div class="menu-bubble ripple-effect" id="contact-bubble">
+                    <span class="fa fa-envelope fa-lg"></span>
+                    <span class="ink animate"></span>
+                </div>
+            </div>
             <div class="intro">
                 <div class="side side-left">
                     <div class="intro-content intro-content-right">
@@ -89,7 +90,7 @@
                         <!--------------------->
                         <!--  INTRODUCTION   -->
                         <!--------------------->
-                        <div id="introduction-section" class="active-section about-section">
+                        <div id="intro-section" class="active-section about-section">
                             <img src="img/about-background.JPG" style="width: 100%; height: auto">
 <!--
                             <div id="pic-bio">

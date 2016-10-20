@@ -53,28 +53,27 @@ var $grid = $('.grid').imagesLoaded(
 // -------------------
 // ABOUT PAGE SHIFTING
 // -------------------
-var activeLiId = 'introduction-li'; // global var tracking current active tab
-$(".about-li").click(function(){
-    var newSectionLi = $(this).attr('id');
-    var newSection = newSectionLi.replace('li', 'section');
+var activeLiId = 'intro-bubble'; // global var tracking current active tab
+$(".menu-bubble").click(function(){
+    var newSectionBubbleId = $(this).attr('id');
+    var newSection = newSectionBubbleId.replace('bubble', 'section');
     
+    // scroll selected div into view
+     $('html, body').animate({
+        scrollTop: $("#" + newSection).offset().top
+    }, 500);
+        
     // if clicked li isn't current active section
-    if ($(this).hasClass('active-li')==false){
+    if ($(this).hasClass('active-bubble')==false){
         //remove old active li's css
-        var oldActiveSection = activeLiId.replace('li', 'section');
-        $('#' + activeLiId).css({'font-weight': 'normal', 'color':'black'});
-        $('#' + activeLiId).removeClass('active-li');
+        var oldActiveSection = activeLiId.replace('bubble', 'section');
+        $('#' + activeLiId).removeClass('active-bubble');
         // set old active section to inactive and invisible 
         $('#' + oldActiveSection).removeClass('active-section');
-        $('#' + oldActiveSection).css("display", "none");
-        
         // set new active section's li to active
-        activeLiId = newSectionLi;
-        $('#' + newSectionLi).removeAttr('style');
-        $(this).addClass("active-li");
-        
+        activeLiId = newSectionBubbleId;
+        $(this).addClass("active-bubble");
         // set new active section to be active and visible
-        $('#' + newSection).removeAttr('style');
         $('#' + newSection).addClass('active-section');
     }
 });
@@ -93,3 +92,39 @@ $("#introduction-li").click(function(){
         duration: 'slow',
     }, 1000);
 });
+
+// -----------------------
+// Ripple-effect animation
+// -----------------------
+(function($) {
+    $(".ripple-effect").click(function(e){
+        var rippler = $(this);
+
+        // create .ink element if it doesn't exist
+        if(rippler.find(".ink").length == 0) {
+            rippler.append("<span class='ink'></span>");
+        }
+
+        var ink = rippler.find(".ink");
+
+        // prevent quick double clicks
+        ink.removeClass("animate");
+
+        // set .ink diametr
+        if(!ink.height() && !ink.width())
+        {
+            var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
+            ink.css({height: d, width: d});
+        }
+
+        // get click coordinates
+        var x = e.pageX - rippler.offset().left - ink.width()/2;
+        var y = e.pageY - rippler.offset().top - ink.height()/2;
+
+        // set .ink position and add class .animate
+        ink.css({
+          top: y+'px',
+          left:x+'px'
+        }).addClass("animate");
+    })
+})(jQuery);
