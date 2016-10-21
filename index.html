@@ -119,7 +119,7 @@
                         <!--------------------->
                         <div id="skills-section" class="about-section">
                             <div id="first-row-btn">
-                                <div id="capabilities-btn" class="skills-btn">
+                                <div id="capabilities-btn" class="skills-btn active-skill-btn">
                                     <span class="fa fa-bar-chart fa-lg" aria-hidden="true"></span>
                                 </div>
                                 <div id="programming-btn" class="skills-btn">
@@ -127,16 +127,12 @@
                                 </div>
                             </div>
                             <div id="bar-chart" style="display: none">
-                                <div class="capability-graph">
+                                <div id="capabilities-graph" class="active-graph">
                                     <ul class="x-axis">
                                         <li ng-repeat="cap in capabilties"><span>{{cap.CName}}</span></li>
                                     </ul>
                                     <ul class="y-axis">
-                                        <li><span>Expert</span></li>
-                                        <li><span>Advanced</span></li>
-                                        <li><span>Intermediate</span></li>
-                                        <li><span>Novice</span></li>
-                                        <li><span></span></li>
+                                        <li ng-repeat="level in levels"><span>{{level.level}}</span></li>
                                     </ul>
                                     <div class="bars">
                                         <div class="bar-group" ng-repeat="cap in capabilties">
@@ -144,7 +140,21 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div id="programming-graph" style="display: none">
+                                    <ul class="x-axis">
+                                        <li ng-repeat="pro in programming"><span>{{pro.PName}}</span></li>
+                                    </ul>
+                                    <ul class="y-axis">
+                                        <li ng-repeat="level in levels"><span>{{level.level}}</span></li>
+                                    </ul>
+                                    <div class="bars">
+                                        <div class="bar-group" ng-repeat="pro in programming">
+                                            <div class="bar bar-{{$index + 1}} stat-1" style="height: {{pro.PScore}}%"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            
                             <div id="second-row-btn">
                                 <div id="design-btn" class="skills-btn">
                                     <span class="fa fa-paint-brush fa-lg" aria-hidden="true"></span>

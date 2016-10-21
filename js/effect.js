@@ -64,7 +64,7 @@ function isScrolledIntoView(elem)
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
-// display skills chart when scrolled in view
+// display skills capability chart when scrolled in view
 $(window).scroll(function(){
     var inView = isScrolledIntoView('#skills-section');
     if(inView == true){
@@ -87,8 +87,8 @@ $(".menu-bubble").click(function(){
     }, 500);
     
     if($(this).attr('id')=='skills-bubble'){
-        $('#bar-chart').removeAttr('style');
-        $('#bar-chart').css('display', 'block');
+        $('#capabilities-graph').removeAttr('style');
+        $('#capabilities-graph').css('display', 'block');
     }
         
     // if clicked li isn't current active section
@@ -105,6 +105,30 @@ $(".menu-bubble").click(function(){
         $('#' + newSection).addClass('active-section');
     }
 });
+
+// -------------------------------------
+// SKILLS BAR GRAPH SHIFTING (via Click)
+// -------------------------------------
+var activeSkillBtnId = 'capabilities-btn';
+$('.skills-btn').click(function(){
+    var newSkillBtnId = $(this).attr('id');
+    var newGraph = newSkillBtnId.replace('btn', 'graph');
+    
+    if($(this).hasClass('active-skill-btn')==false){
+        var oldGraph = activeSkillBtnId.replace('btn', 'graph');
+        $('#' + activeSkillBtnId).removeClass('active-skill-btn');
+        $('#' + oldGraph).removeClass('active-graph');
+        $('#' + oldGraph).removeAttr('css');
+        $('#' + oldGraph).fadeOut( "slow", function() {});
+        
+        activeSkillBtnId = newSkillBtnId;
+        $(this).addClass("active-skill-btn");
+        $('#' + newGraph).addClass('active-graph');
+        $('#' + newGraph).fadeIn( "slow", function() {});
+    }
+});
+
+
 
 // ---------------------------
 // Introduction Load Animation

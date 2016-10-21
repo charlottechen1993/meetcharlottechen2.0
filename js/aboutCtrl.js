@@ -11,7 +11,21 @@ app.controller("aboutCtrl", function($scope) {
         }
     ]
     
-     $scope.capabilties = [
+    $scope.levels=[
+        {
+            level: "Expert"
+        },{
+            level: "Advanced"
+        },{
+            level: "Intermediate"
+        },{
+            level: "Novice"
+        },{
+            level: ""
+        }
+    ]
+    
+    $scope.capabilties = [
         {
             CName: "UI/UX Design",
             CScore: 70
@@ -24,6 +38,9 @@ app.controller("aboutCtrl", function($scope) {
         },{
             CName: "Agile Scrum Methodology",
             CScore: 75
+        },{
+            CName: "Photography",
+            CScore: 25
         }
     ]
      
@@ -40,10 +57,6 @@ app.controller("aboutCtrl", function($scope) {
             PName: "C",
             SubCat: [],
             PScore: 50
-        },{
-            PName: "HTML",
-            SubCat: [],
-            PScore: 75
         },{
             PName: "CSS",
             SubCat: ["SASS", "Bootstrap"],
