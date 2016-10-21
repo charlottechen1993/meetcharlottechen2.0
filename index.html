@@ -127,36 +127,20 @@
                                 </div>
                             </div>
                             <div id="bar-chart" style="display: none">
-                                <div class="graph">
+                                <div class="capability-graph">
                                     <ul class="x-axis">
-                                        <li><span>Photoshop</span></li>
-                                        <li><span>Illustrator</span></li>
-                                        <li><span>InDesign</span></li>
-                                        <li><span>SAI</span></li>
-                                        <li><span>Maya</span></li>
+                                        <li ng-repeat="cap in capabilties"><span>{{cap.CName}}</span></li>
                                     </ul>
                                     <ul class="y-axis">
                                         <li><span>Expert</span></li>
-                                        <li><span>Proficient</span></li>
+                                        <li><span>Advanced</span></li>
+                                        <li><span>Intermediate</span></li>
                                         <li><span>Novice</span></li>
-                                        <li><span>Beginner</span></li>
                                         <li><span></span></li>
                                     </ul>
                                     <div class="bars">
-                                        <div class="bar-group">
-                                            <div class="bar bar-1 stat-1" style="height: 25%;"></div>
-                                        </div>
-                                        <div class="bar-group">
-                                            <div class="bar bar-2 stat-1" style="height: 50%;"></div>
-                                        </div>
-                                        <div class="bar-group">
-                                            <div class="bar bar-3 stat-1" style="height: 75%;"></div>
-                                        </div>
-                                        <div class="bar-group">
-                                            <div class="bar bar-4 stat-1" style="height: 75%;"></div>
-                                        </div>
-                                        <div class="bar-group">
-                                            <div class="bar bar-5 stat-1" style="height: 100%;"></div>
+                                        <div class="bar-group" ng-repeat="cap in capabilties">
+                                            <div class="bar bar-{{$index + 1}} stat-1" style="height: {{cap.CScore}}%"></div>
                                         </div>
                                     </div>
                                 </div>
