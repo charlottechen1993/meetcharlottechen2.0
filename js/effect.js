@@ -50,9 +50,32 @@ var $grid = $('.grid').imagesLoaded(
     }); 
 
 
-// -------------------
-// ABOUT PAGE SHIFTING
-// -------------------
+// --------------------------------
+// ABOUT PAGE SHIFTING (via Scroll)
+// --------------------------------
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+// display skills chart when scrolled in view
+$(window).scroll(function(){
+    var inView = isScrolledIntoView('#skills-section');
+    if(inView == true){
+        $('#bar-chart').removeAttr('style');
+        $('#bar-chart').css('display', 'block');
+    }
+});
+
+// --------------------------------
+// ABOUT PAGE SHIFTING (via Click)
+// --------------------------------
 var activeLiId = 'intro-bubble'; // global var tracking current active tab
 $(".menu-bubble").click(function(){
     var newSectionBubbleId = $(this).attr('id');

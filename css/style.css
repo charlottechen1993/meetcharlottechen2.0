@@ -137,9 +137,6 @@ a {
 /*----------------------------*/
 /*-------- About Page --------*/
 /*----------------------------*/
-.about-section{
-    margin-bottom: 60px;
-}
 
 /* ------------ */
 /*     MENU     */
@@ -318,10 +315,79 @@ strong{
     color: #497B90;
 }
 
+/* ---------- */
+/*   SKILLS   */
+/* ---------- */
 #skills-section{
-    padding: 10px;
-    display: flex;
+    padding: 40px;
 }
+
+#first-row-btn{
+    display: inline;
+}
+
+.skills-btn{
+    display: inline-block;
+    border-radius: 50%;
+    background: white;
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    margin-left: 10px;
+    border: 2px solid #71a5a7;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+    white-space: nowrap;
+    opacity: 0.5;
+}
+
+.skills-btn span{
+    top: 68%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: -22px;
+    color: #71a5a7;
+    position:relative;
+    display: table;
+}
+
+.skills-btn:hover{
+    opacity: 1;
+}
+
+#capabilities-btn, #design-btn{
+    margin-left: 70px;
+}
+
+#programming-btn, #lang-btn{
+    right: 150px;
+    position:absolute;
+}
+
+/* ---------- */
+/* EXPERIENCE */
+/* ---------- */
+#work-gallery{
+    display: inline;
+}
+
+.job-block{
+    position: relative;
+    display: inline-block;
+    width: 33.3%;
+    overflow: hidden;
+    background: white;
+    border: 1px solid #4679BD;
+    margin-right: -6px;
+    margin-top: -7px;
+}
+.job-block:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
 /* ---------- */
 /* CONTACT ME */
 /* ---------- */
