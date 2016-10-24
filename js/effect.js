@@ -76,6 +76,7 @@ $(window).scroll(function(){
 // --------------------------------
 // ABOUT PAGE SHIFTING (via Click)
 // --------------------------------
+var activeSkillBtnId = 'capabilities-btn';
 var activeLiId = 'intro-bubble'; // global var tracking current active tab
 $(".menu-bubble").click(function(){
     var newSectionBubbleId = $(this).attr('id');
@@ -86,9 +87,13 @@ $(".menu-bubble").click(function(){
         scrollTop: $("#" + newSection).offset().top
     }, 500);
     
+    
     if($(this).attr('id')=='skills-bubble'){
-        $('#capabilities-graph').removeAttr('style');
-        $('#capabilities-graph').css('display', 'block');
+        var newSkillBtnId = $(this).attr('id');
+        var newGraph = newSkillBtnId.replace('btn', 'graph');
+        if($('#'+newGraph).hasClass('active-graph')==false){
+            $('#'+newGraph).fadeIn( "slow", function() {});
+        }
     }
         
     // if clicked li isn't current active section
@@ -109,7 +114,6 @@ $(".menu-bubble").click(function(){
 // -------------------------------------
 // SKILLS BAR GRAPH SHIFTING (via Click)
 // -------------------------------------
-var activeSkillBtnId = 'capabilities-btn';
 $('.skills-btn').click(function(){
     var newSkillBtnId = $(this).attr('id');
     var newGraph = newSkillBtnId.replace('btn', 'graph');

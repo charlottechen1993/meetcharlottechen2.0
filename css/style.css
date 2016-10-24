@@ -137,7 +137,10 @@ a {
 /*----------------------------*/
 /*-------- About Page --------*/
 /*----------------------------*/
-
+.about-section{
+    min-height: 100vh;
+    vertical-align: middle;
+}
 /* ------------ */
 /*     MENU     */
 /* ------------ */
@@ -374,19 +377,47 @@ strong{
 
 .job-block{
     position: relative;
-    display: inline-block;
     width: 33.3%;
     overflow: hidden;
-    background: white;
-    border: 1px solid #4679BD;
-    margin-right: -6px;
-    margin-top: -7px;
+    height: 50vh;
+    float:left;
 }
-.job-block:before{
-    content: "";
-    display: block;
-    padding-top: 100%;
+
+.job-block-img{
+	width:100%;
+    height:50vh;
+	background-position:center top;
+    background-size: cover;
+    
+    -moz-filter: blur(5px) !Important;
+    -o-filter: blur(5px) !Important;
+    -ms-filter: blur(5px) !Important;
+    filter: blur(5px) !Important;
+    transform: scale(1.1);
+    
+	transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
+
+.job-block h4, .job-block h5, .job-block p{
+    color:white;
+    float:left;
+    z-index: 999;
+    text-align: center;
+    position: relative;
+    margin:5px;
+    filter: none !important;
+}
+
+.cssco.cssco--t1:hover{
+    cursor: pointer;
+}
+.cssco.cssco--t1:hover .job-block-img{
+    filter:none !Important;
+} 
 
 /* ---------- */
 /* CONTACT ME */

@@ -85,11 +85,23 @@
     margin-right: 10%;
 }
 
-#bar-chart .bar-group:last-child {
+#bar-chart .bar-group-3 {
+    display: block;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 12%;
+    margin-right: 12.5%;
+    margin-left: 10%;
+}
+
+#bar-chart .bar-group:last-child, 
+#bar-chart .bar-group-3:last-child{
     margin-right: 0;
 }
 
-#bar-chart .bar-group .bar {
+#bar-chart .bar-group .bar, 
+#bar-chart .bar-group-3 .bar {
     visibility: hidden;
     height: 0;
     -webkit-animation: animate-height;
@@ -113,46 +125,49 @@
     margin-left: 8%;
 }
 
-#bar-chart .bar-group .bar:nth-child(2) {
+#bar-chart .bar-group .bar:nth-child(2),
+#bar-chart .bar-group-3 .bar:nth-child(2){
     left: 35%;
 }
 
-#bar-chart .bar-group .bar:nth-child(3) {
+#bar-chart .bar-group .bar:nth-child(3),
+#bar-chart .bar-group-3 .bar:nth-child(3){
     left: 70%;
 }
 
-#bar-chart .bar-group .bar span {
+#bar-chart .bar-group .bar span, 
+#bar-chart .bar-group-3 .bar span{
     display: none;
 }
 
-#bar-chart .bar-group .bar-1 {
+#bar-chart .bar-group .bar-1,
+#bar-chart .bar-group-3 .bar-1{
     animation-delay: 0.3s;
     -webkit-animation-delay: 0.3s;
 }
 
-#bar-chart .bar-group .bar-2 {
+#bar-chart .bar-group .bar-2,
+#bar-chart .bar-group-3 .bar-2{
     animation-delay: 0.4s;
     -webkit-animation-delay: 0.4s;
 }
 
-#bar-chart .bar-group .bar-3 {
+#bar-chart .bar-group .bar-3,
+#bar-chart .bar-group-3 .bar-3{
     animation-delay: 0.5s;
     -webkit-animation-delay: 0.5s;
 }
 
-#bar-chart .bar-group .bar-4 {
+#bar-chart .bar-group .bar-4,
+#bar-chart .bar-group-3 .bar-4{
     animation-delay: 0.6s;
     -webkit-animation-delay: 0.6s;
 }
 
-#bar-chart .bar-group .bar-5 {
+#bar-chart .bar-group .bar-5,
+#bar-chart .bar-group-3 .bar-5{
     animation-delay: 0.7s;
     -webkit-animation-delay: 0.7s;
-}
-
-#bar-chart .bar-group .bar-6 {
-    animation-delay: 0.8s;
-    -webkit-animation-delay: 0.8s;
 }
 
 #bar-chart ul {
@@ -161,7 +176,8 @@
     padding: 0;
 }
 
-#bar-chart .x-axis {
+#bar-chart .x-axis,
+#bar-chart .x-axis-3{
     bottom: 0;
     position: absolute;
     text-align: center;
@@ -175,7 +191,16 @@
     width: 11.5%;
 }
 
-#bar-chart .x-axis li:last-child {
+#bar-chart .x-axis-3 li {
+    float: left;
+    margin-right: 13%;
+    margin-left: 10%;
+    font-size: 11px;
+    width: 10%;
+}
+
+#bar-chart .x-axis li:last-child,
+#bar-chart .x-axis-3 li:last-child{
     margin-right: 0;
 }
 

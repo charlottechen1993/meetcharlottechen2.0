@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bar.css">
+    <link href="css/filter.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div class="container">
@@ -153,8 +154,33 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div id="design-graph" style="display: none">
+                                    <ul class="x-axis">
+                                        <li ng-repeat="design in designs"><span>{{design.DName}}</span></li>
+                                    </ul>
+                                    <ul class="y-axis">
+                                        <li ng-repeat="level in levels"><span>{{level.level}}</span></li>
+                                    </ul>
+                                    <div class="bars">
+                                        <div class="bar-group" ng-repeat="design in designs">
+                                            <div class="bar bar-{{$index + 1}} stat-1" style="height: {{design.DScore}}%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="lang-graph" style="display: none">
+                                    <ul class="x-axis-3">
+                                        <li ng-repeat="lang in languages"><span>{{lang.Language}}</span></li>
+                                    </ul>
+                                    <ul class="y-axis">
+                                        <li ng-repeat="level in lang_levels"><span>{{level.level}}</span></li>
+                                    </ul>
+                                    <div class="bars">
+                                        <div class="bar-group-3" ng-repeat="lang in languages">
+                                            <div class="bar bar-{{$index + 1}} stat-1" style="height: {{lang.Proficiency}}%"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            
                             <div id="second-row-btn">
                                 <div id="design-btn" class="skills-btn">
                                     <span class="fa fa-paint-brush fa-lg" aria-hidden="true"></span>
@@ -170,13 +196,10 @@
                         <!--------------------->
                         <div id="experiences-section" class="about-section">
                             <div id="work-gallery">
-                                <div class="job-block">
-                                </div>
-                                <div class="job-block">
-                                </div>
-                                <div class="job-block">
-                                </div>
-                                <div class="job-block">
+                                <div class="job-block cssco cssco--t1" ng-repeat="job in jobs">
+                                    <h4>{{job.Company}}</h4>
+                                    <h5>{{job.Position}}</h5>
+                                    <div class="job-block-img" ng-style="{'background-image':'url(img/{{job.Image}})'}"></div>
                                 </div>
                             </div>
                         </div>
