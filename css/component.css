@@ -71,7 +71,7 @@ body {
 /* Intro content, profile image and name, back button */
 .intro-content {
 	position: relative;
-	top: 50%;
+	top: 45%;
     width: 13.6%;
 	cursor: pointer;
 	-webkit-transform: translateY(-50%) translateX(-50%);

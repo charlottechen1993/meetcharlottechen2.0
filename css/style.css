@@ -103,6 +103,8 @@ a {
 .nav-square-white {
     z-index: 500;
     opacity: 0.8;
+    width: 100px;
+    height: 100px;
     display: grid;
     position: relative;
     border: 2px solid rgba(255, 255, 255, 0.7);
@@ -111,6 +113,12 @@ a {
     padding: 15px;
     font-size: 18px;
     background-color: rgba(255, 255, 255, 0.1)
+        
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
 
 .nav-square-white:hover {
@@ -119,6 +127,8 @@ a {
 
 .nav-square-blue {
     opacity: 0.8;
+    width: 100px;
+    height: 100px;
     z-index: 500;
     display: grid;
     position: relative;
@@ -127,13 +137,17 @@ a {
     color: #A6CCCC;
     padding: 15px;
     font-size: 18px;
+    
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
 
 .nav-square-blue:hover {
     opacity: 1;
 }
-
-
 /*----------------------------*/
 /*-------- About Page --------*/
 /*----------------------------*/
@@ -145,9 +159,18 @@ a {
 /*     MENU     */
 /* ------------ */
 #about-menu{
-    margin-top: 30px;
+    margin-top: 80px;
+    margin-left: 3.5%;
     font-size: 13px;
-    right:150px;
+    position:fixed;
+    display: none;
+    z-index: 999;
+}
+
+#about-menu-2{
+    margin-top: 250px;
+    margin-left: 3.5%;
+    font-size: 13px;
     position:fixed;
     display: none;
     z-index: 999;
@@ -157,12 +180,12 @@ a {
     width: 100%;
 }
 
-.menu-bubble{
+.menu-bubble, .port-bubble{
     border-radius: 50%;
     background: #71a5a7;
+    margin-top: 20px;
     height: 50px;
     width: 50px;
-    display: inline-block;
     margin-left: 10px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     cursor: pointer;
@@ -170,12 +193,15 @@ a {
 }
 
 .menu-bubble:hover,
+.port-bubble:hover,
 .menu-bubble:focus,
-.menu-bubble:active{
+.port-bubble:focus,
+.menu-bubble:active,
+.port-bubble:active{
     background: #478588;
 }
 
-.menu-bubble span{
+.menu-bubble span, .port-bubble span{
     top: 80%;
     height: 100%;
     width: 100%;

@@ -40,20 +40,32 @@
 		}
 		classie.add( splitlayout, 'reset-layout' );
 
+        // open about page
 		leftSide.querySelector( 'div.intro-content' ).addEventListener( eventtype, function( ev ) {
 			reset();
             setTimeout(function(){
                 classie.add( splitlayout, 'open-left' );
+                $(".nav-square-white").css({"border-radius":"50%", "height":"65px", "width":"65px"});
+                $(".square-content").hide();
+                $(".fa-arrow-right").show();
             }, 500);
-			
+            
 		});
+        
+        $(document).ready(function(){
+            $(".fa-arrow-right").hide();
+            $(".fa-arrow-left").hide();
+        })
 
+        // open portfolio page
 		rightSide.querySelector( 'div.intro-content' ).addEventListener( eventtype, function( ev ) {
 			reset();
             setTimeout(function(){
-                classie.add( splitlayout, 'open-right' );
+                classie.add( splitlayout, 'open-right' );  
+                $(".nav-square-blue").css({"border-radius":"50%", "height":"65px", "width":"65px"});
+                $(".square-content").hide();
+                $(".fa-arrow-left").show();
             }, 500);
-            
 		});
 		// back to intro
 		// after transition ends:

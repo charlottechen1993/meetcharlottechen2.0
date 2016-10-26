@@ -14,9 +14,6 @@ app.controller("portfolioCtrl", function($scope) {
         },{
             Name: "Layout",
             Number: 2
-        },{
-            Name: "Photo",
-            Number: 0
         }
     ]
     

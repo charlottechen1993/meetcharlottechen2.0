@@ -12,6 +12,14 @@ $('.intro-content').click(function() {
 $(".intro-content-right").click(function(){
     setTimeout(function(){
         $("#about-menu").show();
+        $("#about-menu-2").show();
+    }, 1000);
+});
+
+$(".intro-content-left").click(function(){
+    setTimeout(function(){
+        $("#port-menu").show();
+        $("#port-menu-2").show();
     }, 1000);
 });
 
@@ -23,6 +31,14 @@ $('.back').click(function() {
         easing: 'swing',
     }, 1000);
     $("#about-menu").hide();
+    $("#about-menu-2").hide();
+    $("#port-menu").hide();
+    $("#port-menu-2").hide();
+    $(".nav-square-white").css({"border-radius":"0", "height":"100px", "width":"100px"})
+    $(".nav-square-blue").css({"border-radius":"0", "height":"100px", "width":"100px"})
+    $(".fa-arrow-right").hide();
+    $(".fa-arrow-left").hide();
+    $(".square-content").show();
 });
 
 // -------------------
