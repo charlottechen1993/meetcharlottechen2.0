@@ -22,7 +22,7 @@
 </head>
 <body>
     <div class="container">
-        <div id="splitlayout" class="splitlayout">
+        <div id="splitlayout" class="splitlayout" ng-controller="portfolioCtrl">
             <div class="intro">
                 <div class="side side-left">
                     <!-- About Page Menu -->
@@ -52,11 +52,8 @@
                 </div>
                 <div class="side side-right">
                     <div id="port-menu">
-                        <div class="menu-bubble ripple-effect" id="all-bubble">
-                            <span class="fa fa-user fa-lg"></span>
-                        </div>
-                        <div class="menu-bubble ripple-effect" id="drawing-bubble">
-                            <span class="fa fa-paint-brush fa-lg"></span>
+                        <div class="port-menu-bubble ripple-effect" id="drawing-bubble" ng-repeat="cat in categories" ng-if="$index < 2" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">
+                            <span class="fa {{cat.fa}} fa-lg"></span>
                         </div>
                     </div>
                     <div class="intro-content intro-content-left">
@@ -66,11 +63,8 @@
                         </div>
                     </div>
                     <div id="port-menu-2">
-                        <div class="menu-bubble ripple-effect" id="web-bubble">
-                            <span class="fa fa-file-code-o fa-lg"></span>
-                        </div>
-                        <div class="menu-bubble ripple-effect" id="design-bubble">
-                            <span class="fa fa-code fa-lg"></span>
+                        <div class="port-menu-bubble ripple-effect" id="drawing-bubble" ng-repeat="cat in categories" ng-if="$index >= 2" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">
+                            <span class="fa {{cat.fa}} fa-lg"></span>
                         </div>
                     </div>
                     <div class="overlay"></div>
@@ -80,13 +74,15 @@
             <!-------------------->
             <!-- Portfolio Page -->
             <!-------------------->
-            <div class="page page-right" ng-controller="portfolioCtrl">
+            <div class="page page-right">
                 <div class="page-inner">
+<!--
                     <div id="filter-bar">
                         <ul class="portfolio-menu" ng-repeat="cat in categories">
                             <li class="portfolio-menu-item" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">{{cat.Name}}</li>
                         </ul>
                     </div>
+-->
                     <section class="project-gallery"> 
                         <div class="grid">
                             <div class="grid-sizer"></div>

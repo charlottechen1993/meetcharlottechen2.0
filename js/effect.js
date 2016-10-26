@@ -56,7 +56,7 @@ var $grid = $('.grid').imagesLoaded(
         });
         
         // filter based on project category
-        $('.portfolio-menu').on('click', 'li', function() {         
+        $(".port-menu-bubble").click(function(){  
             var filterValue = $(this).attr('data-filter');
             if(filterValue == 'All')
                 $grid.isotope({ filter: '*'});

@@ -4,16 +4,20 @@ app.controller("portfolioCtrl", function($scope) {
     $scope.categories = [
         {
             Name: "All",
-            Number: 3
+            Number: 3,
+            fa: "fa-paint-brush",
         },{
             Name: "Drawing",
-            Number: 1
+            Number: 1,
+            fa: "fa-paint-brush",
         },{
             Name: "Web",
-            Number: 0
+            Number: 0,
+            fa: "fa fa-file-code-o",
         },{
             Name: "Layout",
-            Number: 2
+            Number: 2,
+            fa: "fa fa-file-code-o",
         }
     ]
     

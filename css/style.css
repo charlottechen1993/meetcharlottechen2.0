@@ -176,11 +176,29 @@ a {
     z-index: 999;
 }
 
+#port-menu{
+    margin-top: 80px;
+    margin-left:510px;
+    font-size: 13px;
+    position:fixed;
+    display: none;
+    z-index: 999;
+}
+
+#port-menu-2{
+    margin-top: 250px;
+    margin-left:510px;
+    font-size: 13px;
+    position:fixed;
+    display: none;
+    z-index: 999;
+}
+
 .active-section{
     width: 100%;
 }
 
-.menu-bubble, .port-bubble{
+.menu-bubble, .port-menu-bubble{
     border-radius: 50%;
     background: #71a5a7;
     margin-top: 20px;
@@ -193,15 +211,15 @@ a {
 }
 
 .menu-bubble:hover,
-.port-bubble:hover,
+.port-menu-bubble:hover,
 .menu-bubble:focus,
-.port-bubble:focus,
+.port-menu-bubble:focus,
 .menu-bubble:active,
-.port-bubble:active{
+.port-menu-bubble:active{
     background: #478588;
 }
 
-.menu-bubble span, .port-bubble span{
+.menu-bubble span, .port-menu-bubble span{
     top: 80%;
     height: 100%;
     width: 100%;
