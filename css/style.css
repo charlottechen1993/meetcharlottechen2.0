@@ -359,7 +359,6 @@ a {
 
 strong{
     font-weight: bold !important;
-    color: #497B90;
 }
 
 /* ---------- */
@@ -501,36 +500,54 @@ strong{
     display: flex;
 }
 
+#contact-inner-section{
+    width: 90%;
+    min-height: 90%;
+    margin: 5%;
+    background: #8BBCBB;
+    overflow: hidden;
+    padding: 20px;
+}
+
 #left-contact, #right-contact{
-   padding: 20px;
+    padding: 20px;
+    display: table-cell;
 }
 
 #right-contact{
     align-self: flex-end;
+    vertical-align: bottom;
 }
 
-#right-contact p strong{
-    color: #497B90;
+#right-contact p{
+    color: white;
 }
 
+.form-group{
+    margin-top: 10px;
+}
 .form-control:focus{
     outline: 0;
 }
 
 .form-control{
-    background-color: #E8F3F3;
+    background-color: white;
     border: none;
     border-radius: 0;
-    color: #646464;
+    color: black;
     width: 100%;
     padding: 10px;
     font-size: 13px;
+    resize: none;
+    -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    box-shadow: inset 2px 2px 2px 0px #dddddd;
 }
 
 label{
     font-size: 14px;
-    color: #76A5A5;
-    font-weight: 600;
+    color: white;
+    font-weight: 400;
 }
 
 .form-control::-webkit-input-placeholder { color: black; }
@@ -543,7 +560,7 @@ input:-webkit-autofill {
 }
 
 .btn-email{
-    background-color: #A6CCCC;
+    background-color: #497B90;
     color: white;
     width: 30%;
     height: 40px;
