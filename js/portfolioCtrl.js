@@ -23,33 +23,25 @@ app.controller("portfolioCtrl", function($scope) {
     
     $scope.projects = [
         {
-            Title: "A Girl",
+            Title: "Kim So-Hyun Portrait",
             Category: "Drawing",
-            Image: "portrait.jpg"
+            Image: "portrait.jpg",
+            Area: "Sketch"
         },{
             Title: "Lantern Night",
             Category: "Layout",
-            Image: "lantern-night.jpg"
+            Image: "lantern-night.jpg",
+            Area: ""
         },{
             Title: "Formal",
             Category: "Layout",
-            Image: "formal-2014.jpg"
+            Image: "formal-2014.jpg",
+            Area: ""
         },{
             Title: "Bella Notte",
             Category: "Layout",
-            Image: "bella-notte.jpg"
-        },{
-            Title: "A Girl",
-            Category: "Drawing",
-            Image: "portrait.jpg"
-        },{
-            Title: "A Girl",
-            Category: "Drawing",
-            Image: "portrait.jpg"
-        },{
-            Title: "A Girl",
-            Category: "Drawing",
-            Image: "portrait.jpg"
+            Image: "bella-notte.jpg",
+            Area: ""
         }
     ]
     

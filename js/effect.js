@@ -200,3 +200,14 @@ $("#introduction-li").click(function(){
         }).addClass("animate");
     })
 })(jQuery);
+
+$(document).ready(function(){
+    $(".grid-item").mouseenter(function(){
+        $(this).children(".project-name").fadeIn();
+        $(this).children(".project-area").fadeIn();
+    });
+    $(".grid-item").mouseleave(function(){
+        $(this).children(".project-name").fadeOut();
+        $(this).children(".project-area").fadeOut();
+    });
+});

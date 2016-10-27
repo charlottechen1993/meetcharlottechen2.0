@@ -76,18 +76,13 @@
             <!-------------------->
             <div class="page page-right">
                 <div class="page-inner">
-<!--
-                    <div id="filter-bar">
-                        <ul class="portfolio-menu" ng-repeat="cat in categories">
-                            <li class="portfolio-menu-item" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">{{cat.Name}}</li>
-                        </ul>
-                    </div>
--->
                     <section class="project-gallery"> 
                         <div class="grid">
                             <div class="grid-sizer"></div>
                             <div ng-repeat="project in projects" class="grid-item {{project.Category}}">
                                 <img src="img/{{project.Image}}">
+                                <p class="project-name">{{project.Title | uppercase}}</p>
+                                <p class="project-area">{{project.Area | uppercase}}</p>
                             </div>
                     </section>
                 </div>
@@ -102,7 +97,7 @@
                         <!--  INTRODUCTION   -->
                         <!--------------------->
                         <div id="intro-section" class="active-section about-section">
-                            <img src="img/about-background.JPG" style="width: 100%; height: auto">
+                            <img src="img/about-intro.JPG" style="width: 100%; height: auto">
 <!--
                             <div id="pic-bio">
                                 <img id="about-propic" src="img/pro-pic2.jpg">
@@ -210,9 +205,10 @@
                         <!--------------------->
                         <div id="experiences-section" class="about-section">
                             <div id="work-gallery">
-                                <div class="job-block cssco cssco--t1" ng-repeat="job in jobs">
-                                    <h4>{{job.Company}}</h4>
-                                    <h5>{{job.Position}}</h5>
+                                <div class="job-block" ng-repeat="job in jobs">
+                                    <p id="job-company">{{job.Company | uppercase}}</p>
+                                    <p id="job-position">{{job.Position | uppercase}}</p>
+                                    <p id="job-duration">{{job.Duration}}</p>
                                     <div class="job-block-img" ng-style="{'background-image':'url(img/{{job.Image}})'}"></div>
                                 </div>
                             </div>
