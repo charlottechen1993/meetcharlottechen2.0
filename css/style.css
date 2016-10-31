@@ -158,27 +158,26 @@ a {
 /* ------------ */
 /*     MENU     */
 /* ------------ */
-#about-menu{
-    margin-top: 80px;
-    margin-left: 3.5%;
+.about-menu{
     font-size: 13px;
-    position:fixed;
+    position: absolute;
     display: none;
     z-index: 999;
+    width: 100%;
+    text-align: center;
+}
+
+#about-menu-1{
+    margin-top: -260px;
 }
 
 #about-menu-2{
-    margin-top: 250px;
+    margin-top: 0px;
     margin-left: 3.5%;
-    font-size: 13px;
-    position:fixed;
-    display: none;
-    z-index: 999;
 }
 
 #port-menu{
     margin-top: 80px;
-    margin-left:510px;
     font-size: 13px;
     position:fixed;
     display: none;
@@ -187,7 +186,6 @@ a {
 
 #port-menu-2{
     margin-top: 250px;
-    margin-left:510px;
     font-size: 13px;
     position:fixed;
     display: none;
@@ -201,10 +199,9 @@ a {
 .menu-bubble, .port-menu-bubble{
     border-radius: 50%;
     background: #71a5a7;
-    margin-top: 20px;
-    height: 50px;
-    width: 50px;
-    margin-left: 10px;
+    margin-top: 40px;
+    height: 65px;
+    width: 65px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     cursor: pointer;
     white-space: nowrap;
@@ -224,7 +221,7 @@ a {
     height: 100%;
     width: 100%;
     text-align: center;
-    margin-top: -22px;
+    margin-top: -25px;
     color: white;
     position:relative;
     display: table;
@@ -305,6 +302,27 @@ a {
 /* ------------ */
 /*     INTRO    */
 /* ------------ */
+#intro-section{
+    background: white;
+    position: relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+}
+#intro-section:after {
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 40px rgba(0,0,0,0.8);
+    box-shadow:0 0 40px rgba(0,0,0,0.8);
+    bottom:0px;
+/*    left:10%;*/
+/*    right:10%;*/
+    width:100%;
+    height:50%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+}
+   
 #pic-bio{
     width: 75%;
     display: inline-block;
@@ -415,7 +433,6 @@ strong{
 /* EXPERIENCE */
 /* ---------- */
 #experiences-section{
-    background-image: url("../img/pattern.jpg");
     background-size: cover;
 }
 #work-gallery{
@@ -481,23 +498,14 @@ strong{
     transition: transform 250ms ease-in-out;
 }
 
-/*.job-block:hover #job-company:after { transform: scaleX(1); }*/
-
-/*
-.cssco.cssco--t1:hover{
-    cursor: pointer;
-}
-.cssco.cssco--t1:hover .job-block-img{
-    filter:none !Important;
-} 
-*/
-
 /* ---------- */
 /* CONTACT ME */
 /* ---------- */
 #contact-section{
     float: left;
     display: flex;
+    background-image: url("../img/pattern.png");
+    background-size: cover;
 }
 
 #contact-inner-section{
@@ -570,6 +578,9 @@ input:-webkit-autofill {
     padding-top: 8px;
     border: none;
     font-size: 15px;
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.2s;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
 .btn-email:focus, 
@@ -578,24 +589,28 @@ input:-webkit-autofill {
 .btn-email.active, 
 .btn-email.active, 
 .open > .dropdown-toggle.btn-email{
-    background: #8BBCBB;
+    background: #407284;
     color: white;
-    box-shadow: none;
     outline: 0 none;
     cursor: pointer;
 }
 
 .btn-email:active:focus{
-    background: #8BBCBB;
+    background: #497B90;
     color: white;
     box-shadow: none;
     outline: 0 none;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+    transition-delay: 0s;
 }
     
-#contact-section .social-icons{
+#contact-section {
+    width: auto;
+}
+    
+.social-icons{
     width: 8%;
 }
-    
 /*----------------------------*/
 /*------ Portfolio Page ------*/
 /*----------------------------*/
@@ -729,7 +744,7 @@ input:-webkit-autofill {
 
 /* when screen is 650px or narrower */
 
-`@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 650px) {
     .middle-block {
         width: 60%;
         padding-bottom: 60%;
@@ -750,7 +765,6 @@ input:-webkit-autofill {
 
 
 /* when screen is 480px or narrower */
-
 @media only screen and (max-width: 480px) {
     .block-content h1,
     #myname,
@@ -759,10 +773,25 @@ input:-webkit-autofill {
     }
 }
 
-.top-bar {
-    background-color: #497B90;
-    width: 100%;
-    padding: 20px;
-    color: white;
-    box-shadow: 0px 1px 8px #4b4b4b;
+
+@media only screen and (max-width: 500px) {
+    #left-contact{
+        width: 100% !Important;
+        padding: 0px;
+        display: block;
+    }
+    #right-contact{
+        display: block;
+        padding: 0px;
+        width: 100% !Important;
+    }
+    
+    .btn-email{
+        width: 100%;
+    }
+    
+    .job-block{
+        width: 100%;
+        height: 100%;
+    }
 }

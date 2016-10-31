@@ -9,14 +9,14 @@ $('.intro-content').click(function() {
     }, 800);
 });
 
-$(".intro-content-right").click(function(){
+$(".nav-square-white").click(function(){
     setTimeout(function(){
-        $("#about-menu").show();
+        $("#about-menu-1").show();
         $("#about-menu-2").show();
     }, 1000);
 });
 
-$(".intro-content-left").click(function(){
+$(".nav-square-blue").click(function(){
     setTimeout(function(){
         $("#port-menu").show();
         $("#port-menu-2").show();
@@ -30,11 +30,11 @@ $('.back').click(function() {
         top: '50%',
         easing: 'swing',
     }, 1000);
-    $("#about-menu").hide();
+    $("#about-menu-1").hide();
     $("#about-menu-2").hide();
     $("#port-menu").hide();
     $("#port-menu-2").hide();
-    $(".nav-square-white").css({"border-radius":"0", "height":"100px", "width":"100px"})
+    $(".nav-square-white").css({"border-radius":"0", "height":"100px", "width":"100px", "background": "none", "color": "white"})
     $(".nav-square-blue").css({"border-radius":"0", "height":"100px", "width":"100px"})
     $(".fa-arrow-right").hide();
     $(".fa-arrow-left").hide();

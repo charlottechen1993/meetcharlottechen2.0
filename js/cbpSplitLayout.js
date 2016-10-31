@@ -45,7 +45,7 @@
 			reset();
             setTimeout(function(){
                 classie.add( splitlayout, 'open-left' );
-                $(".nav-square-white").css({"border-radius":"50%", "height":"65px", "width":"65px"});
+                $(".nav-square-white").css({"border-radius":"50%", "height":"65px", "width":"65px", "background": "white", "color": "black"});
                 $(".square-content").hide();
                 $(".fa-arrow-right").show();
             }, 500);

@@ -380,7 +380,8 @@ body {
 	}
 
 	.open-left .side-left .intro-content {
-		top: 100%;
+		top: 50%;
+        height: 100%:
 		-webkit-transform: translateY(-150px) translateX(-87.5%) scale(0.5);
 		transform: translateY(-150px) translateX(-87.5%) scale(0.5);
 	}
