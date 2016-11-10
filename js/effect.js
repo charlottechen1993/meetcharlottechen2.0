@@ -1,3 +1,17 @@
+// --------------------------------
+// ABOUT PAGE SHIFTING (via Scroll)
+// --------------------------------
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((( elemTop >= docViewTop) && (elemTop <= docViewBottom)) || ((elemBottom >= docViewTop) && (elemBottom <= docViewBottom)));
+}
+
 // -------------------------------
 // HOMEPAGE MIDDLE BLOCK ANIMATION
 // -------------------------------
@@ -6,7 +20,7 @@ $('.intro-content').click(function() {
     $('.middle-block').animate({
         top: '-100%',
         easing: 'swing',
-    }, 800);
+    }, 1000);
 });
 
 $(".nav-square-white").click(function(){
@@ -14,6 +28,15 @@ $(".nav-square-white").click(function(){
         $("#about-menu-1").show();
         $("#about-menu-2").show();
     }, 1000);
+    
+    // display skills capability chart when scrolled in view
+    $(window).scroll(function(){
+    var inView = isScrolledIntoView('#skills-section');
+        if(inView == true){
+            $('#bar-chart').removeAttr('style');
+            $('#bar-chart').css('display', 'block');
+        }
+    });
 });
 
 $(".nav-square-blue").click(function(){
@@ -34,7 +57,7 @@ $('.back').click(function() {
     $("#about-menu-2").hide();
     $("#port-menu").hide();
     $("#port-menu-2").hide();
-    $(".nav-square-white").css({"border-radius":"0", "height":"100px", "width":"100px", "background": "none", "color": "white"})
+    $(".nav-square-white").css({"border-radius":"0", "height":"100px", "width":"100px", "background": "none", "color": "white", "box-shadow": "none"})
     $(".nav-square-blue").css({"border-radius":"0", "height":"100px", "width":"100px"})
     $(".fa-arrow-right").hide();
     $(".fa-arrow-left").hide();
@@ -64,30 +87,6 @@ var $grid = $('.grid').imagesLoaded(
                 $grid.isotope({ filter: '.'+filterValue });
         });
     }); 
-
-
-// --------------------------------
-// ABOUT PAGE SHIFTING (via Scroll)
-// --------------------------------
-function isScrolledIntoView(elem)
-{
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
-
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
-
-// display skills capability chart when scrolled in view
-$(window).scroll(function(){
-    var inView = isScrolledIntoView('#skills-section');
-    if(inView == true){
-        $('#bar-chart').removeAttr('style');
-        $('#bar-chart').css('display', 'block');
-    }
-});
 
 // --------------------------------
 // ABOUT PAGE SHIFTING (via Click)

@@ -53,10 +53,10 @@
 }
 
 #bar-chart {
-    height: 300px;
-    width: 50%;
+    height: 310px;
+    width: 55%;
     position: relative;
-    margin: 50px auto 0;
+    margin: 10% auto 0;
 }
 
 #bar-chart * {
@@ -211,7 +211,7 @@
 }
 
 #bar-chart .y-axis li {
-    border-top: 1px solid #d4e8e9;
+    border-top: 1px solid #e5e5e5;
     display: block;
     height: 63.25px;
     width: 100%;
@@ -226,5 +226,5 @@
 }
 
 #bar-chart .stat-1 {
-    background-color: #a5cccd;
+    background-color: #c6ac73;
 }

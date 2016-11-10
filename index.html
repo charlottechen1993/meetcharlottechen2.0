@@ -9,6 +9,7 @@
     
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <!-- CSS -->
@@ -27,6 +28,7 @@
                 <div class="side side-left">
                     <!-- About Page Menu -->
                     <div class="intro-content intro-content-right">
+<!--
                          <div class="about-menu" id="about-menu-1">
                             <div class="menu-bubble ripple-effect active-bubble" id="intro-bubble">
                                 <span class="fa fa-user fa-lg"></span>
@@ -35,10 +37,12 @@
                                 <span class="fa fa-code fa-lg"></span>
                             </div>
                         </div>
+-->
                         <a href="#" class="back back-right"></a>
                         <div class="profile">
-                            <div class="nav-square-white"><span class="square-content">About Me</span><span class="fa fa-arrow-right"></span></div>
+                            <div class="nav-square-white"><span class="square-content">About</span><span class="fa fa-angle-right fa-lg" style="margin-top:9px; margin-left:2px"></span></div>
                         </div>
+<!--
                         <div class="about-menu" id="about-menu-2">
                             <div class="menu-bubble ripple-effect" id="experiences-bubble">
                                 <span class="fa fa-briefcase fa-lg"></span>
@@ -47,6 +51,7 @@
                                 <span class="fa fa-envelope fa-lg"></span>
                             </div>
                         </div>
+-->
                     </div>
                     <div class="overlay"></div>
                 </div>
@@ -59,7 +64,7 @@
                         </div>
                         <a href="#" class="back back-left" title="back to intro"></a>
                         <div class="profile">
-                            <div class="nav-square-blue"><span class="square-content">My Portfolio</span><span class="fa fa-arrow-left"></span></div>
+                            <div class="nav-square-blue"><span class="square-content">Portfolio</span><span class="fa fa-arrow-left"></span></div>
                         </div>
                         <div id="port-menu-2">
                             <div class="port-menu-bubble ripple-effect" id="drawing-bubble" ng-repeat="cat in categories" ng-if="$index >= 2" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">
@@ -97,47 +102,31 @@
                         <!--  INTRODUCTION   -->
                         <!--------------------->
                         <div id="intro-section" class="active-section about-section">
+                            <h1 id="intro-title">DESIGN &amp;
+                            DEVELOP</h1>
                             <img src="img/about-intro(edit).png" style="width: auto; height: 100vh; right: 20%; position: absolute">
-<!--
-                            <div id="pic-bio">
-                                <img id="about-propic" src="img/pro-pic2.jpg">
-                                <div id="bio-block">
-                                    <div style="width: 25%; display: inline-block">
-                                        <h1>BIO</h1>
-                                    </div>
-                                    <div style="width: 75%; display: inline-block">
-                                        <p><ng-include src="'file/description.txt'"></ng-include></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="brief-info-block">
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <p><strong>Age: </strong> 23</p>
-                                            <p><strong>Occupation: </strong><br>Software Engineer</p>
-                                            <p><strong>Alma Mater: </strong><br>University of Pittsburgh</p>
-                                            <p><strong>Hobby: </strong>Drawing &amp Painting, Web Development, Graphic Design, Photography</p>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
--->
                         </div>
                         <!--------------------->
                         <!--     SKILLS      -->
                         <!--------------------->
                         <div id="skills-section" class="about-section">
+                            <h1 id="skills-title">SKILLS</h1>
                             <div id="first-row-btn">
                                 <div id="capabilities-btn" class="skills-btn active-skill-btn">
-                                    <span class="fa fa-bar-chart fa-lg" aria-hidden="true"></span>
+                                    <span class="fa fa-bar-chart" aria-hidden="true"></span>
                                 </div>
                                 <div id="programming-btn" class="skills-btn">
-                                    <span class="fa fa-file-code-o fa-lg" aria-hidden="true"></span>
+                                    <span class="fa fa-file-code-o" aria-hidden="true"></span>
+                                </div>
+                                <div id="design-btn" class="skills-btn">
+                                    <span class="fa fa-paint-brush" aria-hidden="true"></span>
+                                </div>
+                                <div id="lang-btn" class="skills-btn">
+                                    <span class="fa fa-language" aria-hidden="true"></span>
                                 </div>
                             </div>
                             <div id="bar-chart" style="display: none">
-                                <div id="capabilities-graph" class="active-graph">
+                                <div id="capabilities-graph">
                                     <ul class="x-axis">
                                         <li ng-repeat="cap in capabilties"><span>{{cap.CName}}</span></li>
                                     </ul>
@@ -190,62 +179,56 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="second-row-btn">
-                                <div id="design-btn" class="skills-btn">
-                                    <span class="fa fa-paint-brush fa-lg" aria-hidden="true"></span>
-                                </div>
-                                <div id="lang-btn" class="skills-btn">
-                                    <span class="fa fa-language fa-lg" aria-hidden="true"></span>
-                                </div>
-                            </div>
                         </div>
                         
                         <!--------------------->
                         <!--   EXPERIENCES   -->
                         <!--------------------->
                         <div id="experiences-section" class="about-section">
-                            <div id="work-gallery">
-                                <div class="job-block" ng-repeat="job in jobs">
-                                    <p id="job-company">{{job.Company | uppercase}}</p>
-                                    <p id="job-position">{{job.Position | uppercase}}</p>
-                                    <p id="job-duration">{{job.Duration}}</p>
-                                    <div class="job-block-img" ng-style="{'background-image':'url(img/{{job.Image}})'}"></div>
-                                </div>
-                            </div>
+                           <div id="left-work">
+                               <img src="img/booz-intern.jpg" alt="">
+                           </div>
+                           <div id="right-work">
+                               <div id="general-des">
+                                   
+                               </div>
+                               <div id="more-work">
+                                   
+                               </div>
+                           </div>
                         </div>
                         <!--------------------->
                         <!--   CONTACT ME    -->
                         <!--------------------->
                         <div id="contact-section" class="about-section">
-                            <div id="contact-inner-section">
-                                <div id="left-contact" style="width: 65%">
-                                    <form action="/contact" method="post">
-                                        <div class="form-group">
-                                            <label>Your Email</label>
-                                            <input type="email" class="form-control" id="senderEmail" name="email">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Subject</label>
-                                            <input type="text" class="form-control" id="inputSubject" name="subject">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Message</label>
-                                            <textarea class="form-control" rows="8" id="inputText" name="content"></textarea>
-                                        </div>
-                                        <button type="submit" class="btn btn-default btn-email" style="margin-top: 20px">SEND</button>
-                                    </form>
-                                </div>
-                                <div id="right-contact" style="width: 35%">
-                                    <p><i class="fa fa-mobile fa-2x" style="vertical-align: middle" aria-hidden="true"></i>&nbsp&nbsp&nbsp&nbsp(412) 478-6214</p>
-                                    <p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp&nbsp charlottechen21@gmail.com</p>
+                            <h1 id="contact-title">CONTACT ME</h1>
+                            <div id="left-contact" style="width: 65%">
+                                <form action="/contact" method="post">
+                                    <div class="form-group">
+                                        <label>Your Email</label>
+                                        <input type="email" class="form-control" id="senderEmail" name="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Subject</label>
+                                        <input type="text" class="form-control" id="inputSubject" name="subject">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Message</label>
+                                        <textarea class="form-control" rows="8" id="inputText" name="content"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-default btn-email" style="margin-top: 20px">SEND</button>
+                                </form>
+                            </div>
+                            <div id="right-contact" style="width: 35%">
+                                <p><i class="fa fa-mobile fa-2x" style="vertical-align: middle" aria-hidden="true"></i>&nbsp&nbsp&nbsp&nbsp(412) 478-6214</p>
+                                <p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp&nbsp charlottechen21@gmail.com</p>
 
-                                    <p>Please feel free to email me. Or if you’re in the Virginia area, I would love to grab a cup of hot chocolate (I’m allergic to coffee :p)</p>
-                                    <a href="https://www.facebook.com/charlottechen1993"><img src="/img/facebook.png" class="social-icons"></a>
-                                    <a href="https://github.com/charlottechen1993"><img src="/img/github.png" class="social-icons"></a>
-                                    <a href="https://www.instagram.com/charlottechen1993"><img src="/img/instagram.png" class="social-icons"></a>
-                                    <a href="https://www.linkedin.com/profile/view?id=AAIAABFDxboBarzY1ffYFrGL9-mn9LygSGpYYqk&trk=nav_responsive_tab_profile_pic"><img src="/img/linkedin.png" class="social-icons"></a>
-                                    <br><br><br>
-                                </div>
+                                <p>Please feel free to email me. Or if you’re in the Virginia area, I would love to grab a cup of hot chocolate (I’m allergic to coffee :p)</p>
+                                    <a href="https://www.facebook.com/charlottechen1993"><i class="fa fa-facebook-square social-icons"></i></a>
+                                    <a href="https://github.com/charlottechen1993"><i class="fa fa-github-square social-icons"></i></a>
+                                    <a href="https://www.instagram.com/charlottechen1993"><i class="fa fa-instagram social-icons"></i></a>
+                                    <a href="https://www.linkedin.com/in/charlotte-chen-b6200781"><i class="fa fa-linkedin-square social-icons"></i></a>
+                                <br><br><br>
                             </div>
                         </div>
                     </section>
@@ -260,10 +243,10 @@
                 <h1 id="myname">I'm <span>Charlotte</span></h1>
                 <h4 id="dev_design">&lt Developer + Designer &gt</h4>
                 <div class="row">
-                    <a href="https://www.facebook.com/charlottechen1993"><img src="img/facebook.png" class="social-icons"></a>
-                    <a href="https://github.com/charlottechen1993"><img src="img/github.png" class="social-icons"></a>
-                    <a href="https://www.instagram.com/charlottechen1993"><img src="img/instagram.png" class="social-icons"></a>
-                    <a href="https://www.linkedin.com/in/charlotte-chen-b6200781"><img src="img/linkedin.png" class="social-icons"></a>
+                    <a href="https://www.facebook.com/charlottechen1993"><i class="fa fa-facebook-square fa-lg social-icons"></i></a>
+                    <a href="https://github.com/charlottechen1993"><i class="fa fa-github-square fa-lg social-icons"></i></a>
+                    <a href="https://www.instagram.com/charlottechen1993"><i class="fa fa-instagram fa-lg  social-icons"></i></a>
+                    <a href="https://www.linkedin.com/in/charlotte-chen-b6200781"><i class="fa fa-linkedin-square fa-lg social-icons"></i></a>
                 </div>
             </div>
         </div>
