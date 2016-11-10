@@ -304,7 +304,7 @@ a {
     font-size:100px;
     color: rgba(56, 56, 56, 0.1);
     margin:0;
-    left: -7px;
+    left: -3px;
     margin-bottom: 50px;
     position:relative;
     line-height: 83px;
@@ -465,15 +465,24 @@ strong{
 
 #general-des{
     width: 100%;
-    height: 70%;
+    height: 60%;
     display: block;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-#more-work{
+.more-work{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#more-work-1, #more-work-2{
     width: 50%;
-    height: 30%;
-    display: block;
+    height: 40%;
     background: #c6ac73;
+    display: inline-block;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    z-index: -1;
 }
 
 /* ---------- */
@@ -487,7 +496,8 @@ strong{
 }
 
 #contact-title{
-    margin-bottom: 0px;    
+    margin-bottom: 0px;  
+    
 }
 
 #contact-inner-section{
@@ -686,6 +696,54 @@ input:-webkit-autofill {
 
 .project-gallery{
     padding: 20px;
+}
+
+
+.KW_progressContainer {
+    right:4.5%;
+    width: 8px;
+    height: 100vh;
+    margin-bottom: 0px;
+    position: fixed;
+    bottom: 0px;
+/*    overflow: hidden;*/
+    content: "";
+	display: table;
+	table-layout: fixed;
+    z-index: 999;
+}
+
+.KW_progressBar {
+    width: 100%;
+    float: right;
+    height: 0%;
+    z-index:99;
+    max-width: 100%;
+    background-color:#c6ac73;
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+
+.dot-container{
+    height: 3vh;
+    display: block;
+}
+
+.progress-dots{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #c6ac73;
+    display: block;
+    margin-top: 15px;
+}
+
+.KW_progressContainer p{
+    color: #c6ac73;
+    font-size: 10px;
+    text-align: center;
 }
 
 /*----------------------------*/

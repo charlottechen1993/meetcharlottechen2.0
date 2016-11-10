@@ -16,10 +16,10 @@ function isScrolledIntoView(elem)
 // HOMEPAGE MIDDLE BLOCK ANIMATION
 // -------------------------------
 $(".nav-square-white").click(function(){
-    // display skills capability chart when scrolled in view
+    // display skills capability bar chart when scrolled in view
     // only when on about page
     $(window).scroll(function(){
-    var inView = isScrolledIntoView('#skills-section');
+        var inView = isScrolledIntoView('#skills-section');
         if(inView == true){
             $('#bar-chart').removeAttr('style');
             $('#bar-chart').css('display', 'block');
@@ -192,5 +192,23 @@ $(document).ready(function(){
     $(".grid-item").mouseleave(function(){
         $(this).children(".project-name").fadeOut();
         $(this).children(".project-area").fadeOut();
+    });
+});
+
+$(window).load(function () {
+    $(window).scroll(function () {
+        var counter=1;
+        var wintop = $(window).scrollTop()
+            , docheight = $('.page-left').height()
+            , winheight = $(window).height();
+//        console.log("wintop: " + wintop);
+        var totalScroll = ((wintop / (docheight - winheight)) * 100);
+        console.log("total scroll" + totalScroll);
+//        if(totalScroll%6.25<=1){
+        var cur = (totalScroll/6.25).toFixed(0);
+        console.log(cur);
+        $("#dot-"+cur).css("background-color", "#c6ac73 !important");
+//        counter+=1;
+//        }
     });
 });

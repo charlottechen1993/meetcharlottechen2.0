@@ -62,16 +62,16 @@
         // shift middle block up and open portfolio page
 		rightSide.querySelector( 'div.intro-content' ).addEventListener( eventtype, function( ev ) {
 			reset();
-                $('.middle-block').animate({
-                    top: '-100%',
-                }, 1000, 'easeInBack', function(){
-                    classie.add( splitlayout, 'open-right' );  
-                    $(".nav-square-blue").css({"border-radius":"50%", "height":"65px", "width":"65px"});
-                    $(".square-content").hide();
-                    $(".fa-arrow-left").show();
-                    $("#port-menu").show();
-                    $("#port-menu-2").show();
-                });
+            $('.middle-block').animate({
+                top: '-100%',
+            }, 1000, 'easeInBack', function(){
+                classie.add( splitlayout, 'open-right' );  
+                $(".nav-square-blue").css({"border-radius":"50%", "height":"65px", "width":"65px"});
+                $(".square-content").hide();
+                $(".fa-arrow-left").show();
+                $("#port-menu").show();
+                $("#port-menu-2").show();
+            });
 		});
 		// back to intro
 		// after transition ends:

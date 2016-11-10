@@ -38,7 +38,6 @@ app.controller("aboutCtrl", function($scope) {
             level: ""
         }
     ]
-    
     $scope.capabilties = [
         {
             CName: "UI/UX Design",
