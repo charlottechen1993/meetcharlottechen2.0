@@ -15,20 +15,9 @@ function isScrolledIntoView(elem)
 // -------------------------------
 // HOMEPAGE MIDDLE BLOCK ANIMATION
 // -------------------------------
-// load content page
-$('.intro-content').click(function() {
-    $('.middle-block').animate({
-        top: '-100%',
-    }, 1000, 'easeInBack');
-});
-
 $(".nav-square-white").click(function(){
-    setTimeout(function(){
-        $("#about-menu-1").show();
-        $("#about-menu-2").show();
-    }, 1000);
-    
     // display skills capability chart when scrolled in view
+    // only when on about page
     $(window).scroll(function(){
     var inView = isScrolledIntoView('#skills-section');
         if(inView == true){
@@ -39,10 +28,7 @@ $(".nav-square-white").click(function(){
 });
 
 $(".nav-square-blue").click(function(){
-    setTimeout(function(){
-        $("#port-menu").show();
-        $("#port-menu-2").show();
-    }, 1000);
+
 });
 
 
