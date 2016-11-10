@@ -19,8 +19,7 @@ function isScrolledIntoView(elem)
 $('.intro-content').click(function() {
     $('.middle-block').animate({
         top: '-100%',
-        easing: 'swing',
-    }, 1000);
+    }, 1000, 'easeInBack');
 });
 
 $(".nav-square-white").click(function(){
@@ -49,10 +48,9 @@ $(".nav-square-blue").click(function(){
 
 // return to homepage
 $('.back').click(function() {
-    $('.middle-block').animate({
+    $('.middle-block').delay(500).animate({
         top: '50%',
-        easing: 'swing',
-    }, 1000);
+    }, 1200, 'easeOutBack');
     $("#about-menu-1").hide();
     $("#about-menu-2").hide();
     $("#port-menu").hide();

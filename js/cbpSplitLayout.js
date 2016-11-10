@@ -48,7 +48,7 @@
                 $(".nav-square-white").css({"border-radius":"50%", "height":"65px", "width":"65px", "background": "#ba9e66", "color": "white", "box-shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24)"});
                 $(".square-content").hide();
                 $(".fa-arrow-right").show();
-            }, 700);
+            }, 950);
 		});
         
         $(document).ready(function(){
