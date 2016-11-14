@@ -26,7 +26,6 @@
         <div id="splitlayout" class="splitlayout" ng-controller="portfolioCtrl">
             <div class="intro">
                 <div class="side side-left">
-                    <!-- About Page Menu -->
                     <div class="intro-content intro-content-right">
                         <div class="profile">
                             <div class="nav-square-white"><span class="square-content">About</span></div>
@@ -85,9 +84,13 @@
                         <!--  INTRODUCTION   -->
                         <!--------------------->
                         <div id="intro-section" class="active-section about-section">
-                            <h1 id="intro-title">DESIGN &amp;
-                            DEVELOP</h1>
-                            <img src="img/about-intro(edit).png" style="width: auto; height: 100vh; right: 20%; position: absolute">
+                           <h1 id="intro-title" style="width: 80%">DESIGN &amp;<br>DEVELOP</h1>
+                            <div id="left-bio">
+                                <p id="bio"></p>
+                                <button type="submit" class="btn btn-default btn-bio" style="margin-top: 20px">VIEW/DOWNLOAD MY RESUME</button>
+                                <button type="submit" class="btn btn-default btn-bio" style="margin-top: 20px">WATCH A VIDEO</button>
+                            </div>
+                            <img src="img/about-intro(edit).png" style="width: auto; height: 100vh; right: 10%; position: absolute; z-index:999; top:0">
                         </div>
                         <!--------------------->
                         <!--     SKILLS      -->
@@ -97,7 +100,7 @@
                             <div id="first-row-btn">
                                 <div id="capabilities-btn" class="ripple-effect skills-btn active-skill-btn">
                                     <span class="fa fa-star-o" aria-hidden="true"></span>
-                                    <p>capabilities</p>
+                                    <p style="margin-left:-3px">capabilities</p>
                                 </div>
                                 <div id="programming-btn" class="ripple-effect skills-btn">
                                     <span class="fa fa-file-code-o" aria-hidden="true"></span>

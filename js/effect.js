@@ -28,7 +28,6 @@ $(".nav-square-blue").click(function(){
 
 });
 
-
 // return to homepage
 $('.back').click(function() {
     $('.middle-block').delay(500).animate({

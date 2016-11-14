@@ -49,6 +49,7 @@
                 classie.add( splitlayout, 'open-left' );
                 $(".profile").hide();
                 $(".KW_progressContainer").css("display", "block");
+                $("#bio").load("file/description.txt")
             });
 		});
 

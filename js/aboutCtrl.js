@@ -41,13 +41,13 @@ app.controller("aboutCtrl", function($scope) {
     $scope.capabilties = [
         {
             CName: "UI/UX Design",
-            CScore: 70
+            CScore: 75
         },{
             CName: "Frontend Development",
             CScore: 50
         },{
             CName: "Graphic Design",
-            CScore: 60
+            CScore: 75
         },{
             CName: "Agile Scrum Methodology",
             CScore: 75
@@ -61,11 +61,11 @@ app.controller("aboutCtrl", function($scope) {
         {
             PName: "Java",
             SubCat: [],
-            PScore: 60
+            PScore: 50
         },{
             PName: "Python",
             SubCat: [],
-            PScore: 70
+            PScore: 75
         },{
             PName: "C",
             SubCat: [],
