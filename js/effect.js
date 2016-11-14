@@ -195,20 +195,23 @@ $(document).ready(function(){
     });
 });
 
+// Progress menu bar scroll animation
 $(window).load(function () {
+    var arr=[1,2,3,4,5,6,7,8,9,10,11,12]
     $(window).scroll(function () {
-        var counter=1;
         var wintop = $(window).scrollTop()
             , docheight = $('.page-left').height()
             , winheight = $(window).height();
-//        console.log("wintop: " + wintop);
         var totalScroll = ((wintop / (docheight - winheight)) * 100);
         console.log("total scroll" + totalScroll);
-//        if(totalScroll%6.25<=1){
-        var cur = (totalScroll/6.25).toFixed(0);
-        console.log(cur);
-        $("#dot-"+cur).css("background-color", "#c6ac73 !important");
-//        counter+=1;
-//        }
+        var cur = (totalScroll/8.3333).toFixed(0);
+        
+        $.each(arr,function(index, value){
+            if(cur>=value){
+                $("#dot-"+value).css("background-color", "#c6ac73");
+            } else {
+                $("#dot-"+value).css("background-color", "rgba(0,0,0,0)");
+            }
+        });
     });
 });
