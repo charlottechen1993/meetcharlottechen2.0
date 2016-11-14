@@ -12,12 +12,9 @@ function isScrolledIntoView(elem)
     return ((( elemTop >= docViewTop) && (elemTop <= docViewBottom)) || ((elemBottom >= docViewTop) && (elemBottom <= docViewBottom)));
 }
 
-// -------------------------------
-// HOMEPAGE MIDDLE BLOCK ANIMATION
-// -------------------------------
+// display skills capability bar chart when scrolled in view
+// only when on about page
 $(".nav-square-white").click(function(){
-    // display skills capability bar chart when scrolled in view
-    // only when on about page
     $(window).scroll(function(){
         var inView = isScrolledIntoView('#skills-section');
         if(inView == true){
@@ -46,6 +43,7 @@ $('.back').click(function() {
     $(".fa-arrow-right").hide();
     $(".fa-arrow-left").hide();
     $(".square-content").show();
+    $(".KW_progressContainer").css("display", "none");
 });
 
 // -------------------

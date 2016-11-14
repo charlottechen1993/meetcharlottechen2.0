@@ -700,13 +700,12 @@ input:-webkit-autofill {
 
 
 .KW_progressContainer {
-    right:4.5%;
-    width: 8px;
+    right:0;
+    width: 10%;
     height: 100vh;
     margin-bottom: 0px;
     position: fixed;
     bottom: 0px;
-/*    overflow: hidden;*/
     content: "";
 	display: table;
 	table-layout: fixed;
@@ -728,6 +727,8 @@ input:-webkit-autofill {
 .dot-container{
     height: 3vh;
     display: block;
+    width: 10%;
+    margin: 0 auto;
 }
 
 .progress-dots{

@@ -34,73 +34,74 @@
                     <div class="dot-container" ng-repeat="i in [9,10,11,12]"><div class="progress-dots" id="dot-{{i}}"></div></div>
                     <p>CONTACT</p>
                 </div>
-            <div class="side side-left">
-                <!-- About Page Menu -->
-                <div class="intro-content intro-content-right">
-<!--
-                     <div class="about-menu" id="about-menu-1">
-                        <div class="menu-bubble ripple-effect active-bubble" id="intro-bubble">
-                            <span class="fa fa-user fa-lg"></span>
+                <div class="side side-left">
+                    <!-- About Page Menu -->
+                    <div class="intro-content intro-content-right">
+    <!--
+                         <div class="about-menu" id="about-menu-1">
+                            <div class="menu-bubble ripple-effect active-bubble" id="intro-bubble">
+                                <span class="fa fa-user fa-lg"></span>
+                            </div>
+                            <div class="menu-bubble ripple-effect" id="skills-bubble">
+                                <span class="fa fa-code fa-lg"></span>
+                            </div>
                         </div>
-                        <div class="menu-bubble ripple-effect" id="skills-bubble">
-                            <span class="fa fa-code fa-lg"></span>
+    -->
+                       <a href="#" class="back back-right" title="back to intro"></a>
+                        <div class="profile">
+                            <div class="nav-square-white"><span class="square-content">About</span><span class="fa fa-home fa-lg" style="margin-top:9px; margin-left:2px"></span></div>
                         </div>
+    <!--
+                        <div class="about-menu" id="about-menu-2">
+                            <div class="menu-bubble ripple-effect" id="experiences-bubble">
+                                <span class="fa fa-briefcase fa-lg"></span>
+                            </div>
+                            <div class="menu-bubble ripple-effect" id="contact-bubble">
+                                <span class="fa fa-envelope fa-lg"></span>
+                            </div>
+                        </div>
+    -->
                     </div>
--->
-                    <a href="#" class="back back-right"></a>
-                    <div class="profile">
-                        <div class="nav-square-white"><span class="square-content">About</span><span class="fa fa-angle-right fa-lg" style="margin-top:9px; margin-left:2px"></span></div>
-                    </div>
-<!--
-                    <div class="about-menu" id="about-menu-2">
-                        <div class="menu-bubble ripple-effect" id="experiences-bubble">
-                            <span class="fa fa-briefcase fa-lg"></span>
-                        </div>
-                        <div class="menu-bubble ripple-effect" id="contact-bubble">
-                            <span class="fa fa-envelope fa-lg"></span>
-                        </div>
-                    </div>
--->
+                    <div class="overlay"></div>
                 </div>
-                <div class="overlay"></div>
-            </div>
-            <div class="side side-right">
-                <div class="intro-content intro-content-left">
-                    <div id="port-menu">
-                        <div class="port-menu-bubble ripple-effect" id="drawing-bubble" ng-repeat="cat in categories" ng-if="$index < 2" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">
-                            <span class="fa {{cat.fa}} fa-lg"></span>
+                <div class="side side-right">
+                    <div class="intro-content intro-content-left">
+                        <div id="port-menu">
+                            <div class="port-menu-bubble ripple-effect" id="drawing-bubble" ng-repeat="cat in categories" ng-if="$index < 2" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">
+                                <span class="fa {{cat.fa}} fa-lg"></span>
+                            </div>
+                        </div>
+                        <a href="#" class="back back-left" title="back to intro"></a>
+                        <div class="profile">
+                            <div class="nav-square-blue"><span class="square-content">Portfolio</span><span class="fa fa-arrow-left"></span></div>
+                        </div>
+                        <div id="port-menu-2">
+                            <div class="port-menu-bubble ripple-effect" id="drawing-bubble" ng-repeat="cat in categories" ng-if="$index >= 2" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">
+                                <span class="fa {{cat.fa}} fa-lg"></span>
+                            </div>
                         </div>
                     </div>
-                    <a href="#" class="back back-left" title="back to intro"></a>
-                    <div class="profile">
-                        <div class="nav-square-blue"><span class="square-content">Portfolio</span><span class="fa fa-arrow-left"></span></div>
-                    </div>
-                    <div id="port-menu-2">
-                        <div class="port-menu-bubble ripple-effect" id="drawing-bubble" ng-repeat="cat in categories" ng-if="$index >= 2" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">
-                            <span class="fa {{cat.fa}} fa-lg"></span>
-                        </div>
-                    </div>
+                    <div class="overlay"></div>
                 </div>
-                <div class="overlay"></div>
             </div>
-        </div>
             
-        <!-------------------->
-        <!-- Portfolio Page -->
-        <!-------------------->
-        <div class="page page-right">
-            <div class="page-inner">
-                <section class="project-gallery"> 
-                    <div class="grid">
-                        <div class="grid-sizer"></div>
-                        <div ng-repeat="project in projects" class="grid-item {{project.Category}}">
-                            <img src="img/{{project.Image}}">
-                            <p class="project-name">{{project.Title | uppercase}}</p>
-                            <p class="project-area">{{project.Area | uppercase}}</p>
+            <!-------------------->
+            <!-- Portfolio Page -->
+            <!-------------------->
+            <div class="page page-right">
+                <div class="page-inner">
+                    <section class="project-gallery"> 
+                        <div class="grid">
+                            <div class="grid-sizer"></div>
+                            <div ng-repeat="project in projects" class="grid-item {{project.Category}}">
+                                <img src="img/{{project.Image}}">
+                                <p class="project-name">{{project.Title | uppercase}}</p>
+                                <p class="project-area">{{project.Area | uppercase}}</p>
+                            </div>
                         </div>
-                </section>
-            </div>
-        </div>
+                    </section>
+                </div> <!--Page Inner-->
+            </div> <!--Page Right-->
             <!-------------------->
             <!---- About Page ---->
             <!-------------------->
@@ -247,26 +248,26 @@
                             </div>
                         </div>
                     </section>
-                </div>
-            </div>
-        </div>
+                </div> <!--Page Inner-->
+            </div> <!--Page Left-->
+        </div> <!--splitlayout-->
         <!-- Middle Row -->
         <div class="row">
             <div class="middle-block">
-            <div class="block-content">
-                <h1>Hello</h1>
-                <h1 id="myname">I'm <span>Charlotte</span></h1>
-                <h4 id="dev_design">&lt Developer + Designer &gt</h4>
-                <div class="row">
-                    <a href="https://www.facebook.com/charlottechen1993"><i class="fa fa-facebook-square fa-lg social-icons"></i></a>
-                    <a href="https://github.com/charlottechen1993"><i class="fa fa-github-square fa-lg social-icons"></i></a>
-                    <a href="https://www.instagram.com/charlottechen1993"><i class="fa fa-instagram fa-lg  social-icons"></i></a>
-                    <a href="https://www.linkedin.com/in/charlotte-chen-b6200781"><i class="fa fa-linkedin-square fa-lg social-icons"></i></a>
+                <div class="block-content">
+                    <h1>Hello</h1>
+                    <h1 id="myname">I'm <span>Charlotte</span></h1>
+                    <h4 id="dev_design">&lt Developer + Designer &gt</h4>
+                    <div class="row">
+                        <a href="https://www.facebook.com/charlottechen1993"><i class="fa fa-facebook-square fa-lg social-icons"></i></a>
+                        <a href="https://github.com/charlottechen1993"><i class="fa fa-github-square fa-lg social-icons"></i></a>
+                        <a href="https://www.instagram.com/charlottechen1993"><i class="fa fa-instagram fa-lg  social-icons"></i></a>
+                        <a href="https://www.linkedin.com/in/charlotte-chen-b6200781"><i class="fa fa-linkedin-square fa-lg social-icons"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-            
+    </div> <!-- Container -->
     <!--  JS  -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
