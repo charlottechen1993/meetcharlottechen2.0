@@ -32,24 +32,16 @@ $(".nav-square-blue").click(function(){
 // return to homepage
 $('.back').click(function() {
     $('.middle-block').delay(500).animate({
-        top: '50%',
+        top: '50%'
     }, 1200, 'easeOutBack');
-    $("#about-menu-1").hide();
-    $("#about-menu-2").hide();
-    $("#port-menu").hide();
-    $("#port-menu-2").hide();
-    $(".nav-square-white").css({"border-radius":"0", "height":"100px", "width":"100px", "background": "none", "color": "white", "box-shadow": "none"})
-    $(".nav-square-blue").css({"border-radius":"0", "height":"100px", "width":"100px"})
-    $(".fa-arrow-right").hide();
-    $(".fa-arrow-left").hide();
-    $(".square-content").show();
+    $(".profile").show();
     $(".KW_progressContainer").css("display", "none");
 });
 
 // -------------------
 // PORTFOLIO PAGE LOAD
 // -------------------
-//initialize Isotope after all images have been loaded.
+// initialize Isotope after all images have been loaded.
 var $grid = $('.grid').imagesLoaded(
     function(){
         $grid.isotope({
@@ -129,23 +121,6 @@ $('.skills-btn').click(function(){
     }
 });
 
-
-
-// ---------------------------
-// Introduction Load Animation
-// ---------------------------
-$("#introduction-li").click(function(){
-    $("#about-propic").animate({
-        left: ["0", 'easeInOutBack'],
-        duration: 'slow',
-    }, 1200);
-    $("#brief-info-block").delay(100).animate({
-        right:0, 
-        easing: 'easeInOutBack',
-        duration: 'slow',
-    }, 1000);
-});
-
 // -----------------------
 // Ripple-effect animation
 // -----------------------
@@ -201,7 +176,6 @@ $(window).load(function () {
             , docheight = $('.page-left').height()
             , winheight = $(window).height();
         var totalScroll = ((wintop / (docheight - winheight)) * 100);
-        console.log("total scroll" + totalScroll);
         var cur = (totalScroll/8.3333).toFixed(0);
         
         $.each(arr,function(index, value){

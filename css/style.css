@@ -102,7 +102,9 @@ a {
 /*----------------------------*/
 /*------ NAV SQUARE -------*/
 /*----------------------------*/
-
+.fa-home{
+    color: #c6ac73;
+}
 .nav-square-white {
     z-index: 500;
     width: 100px;
@@ -157,73 +159,12 @@ a {
 /* ------------ */
 /*     MENU     */
 /* ------------ */
-.about-menu{
-    font-size: 13px;
-    position: absolute;
-    display: none;
-    z-index: 999;
-    width: 100%;
-    text-align: center;
-}
-
-#about-menu-1{
-    margin-top: -260px;
-}
-
-#about-menu-2{
-    margin-top: 0px;
-    margin-left: 3.5%;
-}
-
-#port-menu{
-    margin-top: 80px;
-    font-size: 13px;
-    position:fixed;
-    display: none;
-    z-index: 999;
-}
-
-#port-menu-2{
-    margin-top: 250px;
-    font-size: 13px;
-    position:fixed;
-    display: none;
-    z-index: 999;
-}
-
 .active-section{
     width: 100%;
 }
 
 .menu-bubble, .port-menu-bubble{
-    border-radius: 50%;
-    background: #71a5a7;
-    margin-top: 40px;
-    height: 65px;
-    width: 65px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     cursor: pointer;
-    white-space: nowrap;
-}
-
-.menu-bubble:hover,
-.port-menu-bubble:hover,
-.menu-bubble:focus,
-.port-menu-bubble:focus,
-.menu-bubble:active,
-.port-menu-bubble:active{
-    background: #478588;
-}
-
-.menu-bubble span, .port-menu-bubble span{
-    top: 80%;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    margin-top: -25px;
-    color: white;
-    position:relative;
-    display: table;
 }
 
 .ripple-effect{
@@ -701,6 +642,7 @@ input:-webkit-autofill {
 
 .KW_progressContainer {
     right:0;
+    top: 3.5em;
     width: 10%;
     height: 100vh;
     margin-bottom: 0px;

@@ -39,12 +39,8 @@
 			classie.add( splitlayout, 'mobile-layout' );
 		}
 		classie.add( splitlayout, 'reset-layout' );
-
-//        $(document).ready(function(){
-            $(".fa-arrow-right").hide();
-            $(".fa-arrow-left").hide();
-            $(".KW_progressContainer").css("display", "none");
-//        })
+        $(".KW_progressContainer").css("display", "none");
+        
         // shift middle block up and open about page
 		leftSide.querySelector( 'div.intro-content' ).addEventListener( eventtype, function( ev ) {
 			reset();
@@ -52,11 +48,7 @@
                 top: '-100%',
             }, 1000, 'easeInBack', function(){
                 classie.add( splitlayout, 'open-left' );
-                $(".nav-square-white").css({"border-radius":"50%", "height":"65px", "width":"65px", "background": "#ba9e66", "color": "white", "box-shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24)"});
-                $(".square-content").hide();
-                $(".fa-arrow-right").show();
-                $("#about-menu-1").show();
-                $("#about-menu-2").show();
+                $(".profile").hide();
                 $(".KW_progressContainer").css("display", "block");
             });
 		});
@@ -68,13 +60,10 @@
                 top: '-100%',
             }, 1000, 'easeInBack', function(){
                 classie.add( splitlayout, 'open-right' );  
-                $(".nav-square-blue").css({"border-radius":"50%", "height":"65px", "width":"65px"});
-                $(".square-content").hide();
-                $(".fa-arrow-left").show();
-                $("#port-menu").show();
-                $("#port-menu-2").show();
+                $(".profile").hide();
             });
 		});
+        
 		// back to intro
 		// after transition ends:
 		var onEndTransFn = function() {

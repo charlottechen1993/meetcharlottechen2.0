@@ -25,61 +25,34 @@
     <div class="container">
         <div id="splitlayout" class="splitlayout" ng-controller="portfolioCtrl">
             <div class="intro">
-                <div class="KW_progressContainer">
-                    <p>ABOUT</p>
-                    <div class="dot-container" ng-repeat="i in [1, 2, 3, 4]"><div class="progress-dots" id="dot-{{i}}"></div></div>
-                    <p>SKILLS</p>
-                    <div class="dot-container" ng-repeat="i in [5,6,7,8]"><div class="progress-dots" id="dot-{{i}}"></div></div>
-                    <p>EXPERIENCES</p>
-                    <div class="dot-container" ng-repeat="i in [9,10,11,12]"><div class="progress-dots" id="dot-{{i}}"></div></div>
-                    <p>CONTACT</p>
-                </div>
                 <div class="side side-left">
                     <!-- About Page Menu -->
                     <div class="intro-content intro-content-right">
-    <!--
-                         <div class="about-menu" id="about-menu-1">
-                            <div class="menu-bubble ripple-effect active-bubble" id="intro-bubble">
-                                <span class="fa fa-user fa-lg"></span>
-                            </div>
-                            <div class="menu-bubble ripple-effect" id="skills-bubble">
-                                <span class="fa fa-code fa-lg"></span>
-                            </div>
-                        </div>
-    -->
-                       <a href="#" class="back back-right" title="back to intro"></a>
                         <div class="profile">
-                            <div class="nav-square-white"><span class="square-content">About</span><span class="fa fa-home fa-lg" style="margin-top:9px; margin-left:2px"></span></div>
+                            <div class="nav-square-white"><span class="square-content">About</span></div>
                         </div>
-    <!--
-                        <div class="about-menu" id="about-menu-2">
-                            <div class="menu-bubble ripple-effect" id="experiences-bubble">
-                                <span class="fa fa-briefcase fa-lg"></span>
-                            </div>
-                            <div class="menu-bubble ripple-effect" id="contact-bubble">
-                                <span class="fa fa-envelope fa-lg"></span>
-                            </div>
-                        </div>
-    -->
                     </div>
                     <div class="overlay"></div>
                 </div>
                 <div class="side side-right">
                     <div class="intro-content intro-content-left">
+<!--
                         <div id="port-menu">
                             <div class="port-menu-bubble ripple-effect" id="drawing-bubble" ng-repeat="cat in categories" ng-if="$index < 2" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">
                                 <span class="fa {{cat.fa}} fa-lg"></span>
                             </div>
                         </div>
-                        <a href="#" class="back back-left" title="back to intro"></a>
+-->
                         <div class="profile">
-                            <div class="nav-square-blue"><span class="square-content">Portfolio</span><span class="fa fa-arrow-left"></span></div>
+                            <div class="nav-square-blue"><span class="square-content">Portfolio</span></div>
                         </div>
+<!--
                         <div id="port-menu-2">
                             <div class="port-menu-bubble ripple-effect" id="drawing-bubble" ng-repeat="cat in categories" ng-if="$index >= 2" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">
                                 <span class="fa {{cat.fa}} fa-lg"></span>
                             </div>
                         </div>
+-->
                     </div>
                     <div class="overlay"></div>
                 </div>
@@ -250,7 +223,23 @@
                     </section>
                 </div> <!--Page Inner-->
             </div> <!--Page Left-->
+            
+            <!-- About Page Menu Navigation -->
+            <a href="#" class="back back-right"><span class="fa fa-home" style="pointer-events:none"></span></a>
+            <div class="KW_progressContainer">
+                <p class="menu-bubble active-bubble" id="intro-bubble">ABOUT</p>
+                <div class="dot-container" ng-repeat="i in [1, 2, 3, 4]"><div class="progress-dots" id="dot-{{i}}"></div></div>
+                <p class="menu-bubble" id="skills-bubble">SKILLS</p>
+                <div class="dot-container" ng-repeat="i in [5,6,7,8]"><div class="progress-dots" id="dot-{{i}}"></div></div>
+                <p class="menu-bubble" id="experiences-bubble">EXPERIENCES</p>
+                <div class="dot-container" ng-repeat="i in [9,10,11,12]"><div class="progress-dots" id="dot-{{i}}"></div></div>
+                <p class="menu-bubble" id="contact-bubble">CONTACT</p>
+            </div>
+            
+            <!-- Portfolio Page Menu Navigation -->
+            <a href="#" class="back back-left"><span class="fa fa-home" style="pointer-events:none"></span></a>
         </div> <!--splitlayout-->
+        
         <!-- Middle Row -->
         <div class="row">
             <div class="middle-block">
