@@ -95,17 +95,21 @@
                         <div id="skills-section" class="about-section">
                             <h1 id="skills-title">SKILLS</h1>
                             <div id="first-row-btn">
-                                <div id="capabilities-btn" class="skills-btn active-skill-btn">
-                                    <span class="fa fa-bar-chart" aria-hidden="true"></span>
+                                <div id="capabilities-btn" class="ripple-effect skills-btn active-skill-btn">
+                                    <span class="fa fa-star-o" aria-hidden="true"></span>
+                                    <p>capabilities</p>
                                 </div>
-                                <div id="programming-btn" class="skills-btn">
+                                <div id="programming-btn" class="ripple-effect skills-btn">
                                     <span class="fa fa-file-code-o" aria-hidden="true"></span>
+                                    <p>coding</p>
                                 </div>
-                                <div id="design-btn" class="skills-btn">
+                                <div id="design-btn" class="ripple-effect skills-btn">
                                     <span class="fa fa-paint-brush" aria-hidden="true"></span>
+                                    <p>design</p>
                                 </div>
-                                <div id="lang-btn" class="skills-btn">
+                                <div id="lang-btn" class="ripple-effect skills-btn">
                                     <span class="fa fa-language" aria-hidden="true"></span>
+                                    <p>languages</p>
                                 </div>
                             </div>
                             <div id="bar-chart" style="display: none">
@@ -227,13 +231,13 @@
             <!-- About Page Menu Navigation -->
             <a href="#" class="back back-right"><span class="fa fa-home" style="pointer-events:none"></span></a>
             <div class="KW_progressContainer">
-                <p class="menu-bubble active-bubble" id="intro-bubble">ABOUT</p>
+                <p class="bubble ripple-effect menu-bubble active-bubble" id="intro-bubble">ABOUT</p>
                 <div class="dot-container" ng-repeat="i in [1, 2, 3, 4]"><div class="progress-dots" id="dot-{{i}}"></div></div>
-                <p class="menu-bubble" id="skills-bubble">SKILLS</p>
+                <p class="bubble ripple-effect menu-bubble" id="skills-bubble">SKILLS</p>
                 <div class="dot-container" ng-repeat="i in [5,6,7,8]"><div class="progress-dots" id="dot-{{i}}"></div></div>
-                <p class="menu-bubble" id="experiences-bubble">EXPERIENCES</p>
+                <p class="bubble ripple-effect menu-bubble" id="experiences-bubble">EXPERIENCES</p>
                 <div class="dot-container" ng-repeat="i in [9,10,11,12]"><div class="progress-dots" id="dot-{{i}}"></div></div>
-                <p class="menu-bubble" id="contact-bubble">CONTACT</p>
+                <p class="bubble ripple-effect menu-bubble" id="contact-bubble">CONTACT</p>
             </div>
             
             <!-- Portfolio Page Menu Navigation -->

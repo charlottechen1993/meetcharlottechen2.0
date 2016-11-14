@@ -163,8 +163,11 @@ a {
     width: 100%;
 }
 
-.menu-bubble, .port-menu-bubble{
+.bubble{
     cursor: pointer;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .ripple-effect{
@@ -246,7 +249,7 @@ a {
     color: rgba(56, 56, 56, 0.1);
     margin:0;
     left: -3px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     position:relative;
     line-height: 83px;
 }
@@ -338,15 +341,21 @@ strong{
     display: inline-block;
     text-align: center;
     border-radius: 50%;
-    background: white;
+    background: rgba(0, 0, 0, 0.05);
     height: 50px;
     width: 50px;
     margin-left: 10px;
-    border: 2px solid #383838;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     cursor: pointer;
     white-space: nowrap;
     opacity: 0.5;
+    overflow: inherit;
+    
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
 .skills-btn span{
@@ -358,10 +367,31 @@ strong{
     color: #383838;
     position:relative;
     display: table;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.skills-btn p{
+    font-size: 11px;
+    position: fixed;
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 30;
 }
 
 .skills-btn:hover{
     opacity: 1;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.skills-btn:hover .fa{
+    color: #c6ac73;
 }
 
 /* ---------- */
@@ -649,7 +679,7 @@ input:-webkit-autofill {
     position: fixed;
     bottom: 0px;
     content: "";
-	display: table;
+	display: none;
 	table-layout: fixed;
     z-index: 999;
 }

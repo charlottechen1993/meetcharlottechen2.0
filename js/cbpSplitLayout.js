@@ -39,7 +39,6 @@
 			classie.add( splitlayout, 'mobile-layout' );
 		}
 		classie.add( splitlayout, 'reset-layout' );
-        $(".KW_progressContainer").css("display", "none");
         
         // shift middle block up and open about page
 		leftSide.querySelector( 'div.intro-content' ).addEventListener( eventtype, function( ev ) {
