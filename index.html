@@ -87,10 +87,10 @@
                            <h1 id="intro-title" style="width: 80%">DESIGN &amp;<br>DEVELOP</h1>
                             <div id="left-bio">
                                 <p id="bio"></p>
-                                <button type="submit" class="btn btn-default btn-bio" style="margin-top: 20px">VIEW/DOWNLOAD MY RESUME</button>
-                                <button type="submit" class="btn btn-default btn-bio" style="margin-top: 20px">WATCH A VIDEO</button>
+                                <a href="file/Resume.pdf" download="charlotte_chen_resume.pdf"><button class="btn btn-default btn-bio" id="btn-resume" style="margin-top: 20px"><i class="fa fa-download" aria-hidden="true"></i> &nbsp DOWNLOAD MY RESUME </button></a>
+                                <button class="btn btn-default btn-bio" style="margin-top: 20px"><i class="fa fa-play" aria-hidden="true"></i>&nbsp WATCH A VIDEO</button>
                             </div>
-                            <img src="img/about-intro(edit).png" style="width: auto; height: 100vh; right: 10%; position: absolute; z-index:999; top:0">
+                            <img src="img/about-intro(edit).png" id="btn-video" style="width: auto; height: 100vh; right: 10%; position: absolute; z-index:998; top:0">
                         </div>
                         <!--------------------->
                         <!--     SKILLS      -->
@@ -175,19 +175,32 @@
                         <!--   EXPERIENCES   -->
                         <!--------------------->
                         <div id="experiences-section" class="about-section">
-                           <div id="left-work">
+                           <div id="left-work" ng-repeat="job in jobs">
                                <img src="img/booz-intern.jpg" alt="">
                                <h1>Booz Allen Hamilton</h1>
                            </div>
                            <div id="right-work">
                                <div id="general-des">
-                                   
+                                   <div class="company-name"></div>
+                                   <div class="job-title"></div>
+                                   <div class="description"></div>
                                </div>
                                <div class="more-work">
+                                    <div class="more-work-nav">
+                                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                    </div>
                                    <div id="more-work-1">
-                                       
+                                       <div class="work_duration"></div>
+                                       <div class="work_location"></div>
+                                       <div class="skills-used"></div>
                                    </div>
                                    <div id="more-work-2">
+                                       
+                                   </div>
+                                   <div id="more-work-3">
+                                       
+                                   </div>
+                                   <div id="more-work-4">
                                        
                                    </div>
                                </div>
