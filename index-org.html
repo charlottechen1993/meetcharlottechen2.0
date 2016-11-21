@@ -37,8 +37,8 @@
                     <div class="intro-content intro-content-left">
 <!--
                         <div id="port-menu">
-                            <div class="port-menu-bubble ripple-effect" id="drawing-bubble" ng-repeat="cat in categories" ng-if="$index < 2" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{[{cat.Name}]}">
-                                <span class="fa {[{cat.fa}]} fa-lg"></span>
+                            <div class="port-menu-bubble ripple-effect" id="drawing-bubble" ng-repeat="cat in categories" ng-if="$index < 2" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">
+                                <span class="fa {{cat.fa}} fa-lg"></span>
                             </div>
                         </div>
 -->
@@ -48,8 +48,8 @@
                         
 <!--
                         <div id="port-menu-2">
-                            <div class="port-menu-bubble ripple-effect" id="drawing-bubble" ng-repeat="cat in categories" ng-if="$index >= 2" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{[{cat.Name}]}">
-                                <span class="fa {[{cat.fa}]} fa-lg"></span>
+                            <div class="port-menu-bubble ripple-effect" id="drawing-bubble" ng-repeat="cat in categories" ng-if="$index >= 2" ng-click="setCategoryName(cat.Name)" ng-model="categoryName" data-filter="{{cat.Name}}">
+                                <span class="fa {{cat.fa}} fa-lg"></span>
                             </div>
                         </div>
 -->
@@ -74,10 +74,10 @@
 <!--
                         <div class="grid">
                             <div class="grid-sizer"></div>
-                            <div ng-repeat="project in projects" class="grid-item {[{project.Category}]}">
-                                <img src="img/{[{project.Image}]}">
-                                <p class="project-name">{[{project.Title | uppercase}]}</p>
-                                <p class="project-area">{[{project.Area | uppercase}]}</p>
+                            <div ng-repeat="project in projects" class="grid-item {{project.Category}}">
+                                <img src="img/{{project.Image}}">
+                                <p class="project-name">{{project.Title | uppercase}}</p>
+                                <p class="project-area">{{project.Area | uppercase}}</p>
                             </div>
                         </div>
 -->
@@ -128,53 +128,53 @@
                             <div id="bar-chart" style="display: none">
                                 <div id="capabilities-graph">
                                     <ul class="x-axis">
-                                        <li ng-repeat="cap in capabilties"><span>{[{cap.CName}]}</span></li>
+                                        <li ng-repeat="cap in capabilties"><span>{{cap.CName}}</span></li>
                                     </ul>
                                     <ul class="y-axis">
-                                        <li ng-repeat="level in levels"><span>{[{level.level}]}</span></li>
+                                        <li ng-repeat="level in levels"><span>{{level.level}}</span></li>
                                     </ul>
                                     <div class="bars">
                                         <div class="bar-group" ng-repeat="cap in capabilties">
-                                            <div class="bar bar-{[{$index + 1}]} stat-1" style="height: {[{cap.CScore}]}%"></div>
+                                            <div class="bar bar-{{$index + 1}} stat-1" style="height: {{cap.CScore}}%"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div id="programming-graph" style="display: none">
                                     <ul class="x-axis">
-                                        <li ng-repeat="pro in programming"><span>{[{pro.PName}]}</span></li>
+                                        <li ng-repeat="pro in programming"><span>{{pro.PName}}</span></li>
                                     </ul>
                                     <ul class="y-axis">
-                                        <li ng-repeat="level in levels"><span>{[{level.level}]}</span></li>
+                                        <li ng-repeat="level in levels"><span>{{level.level}}</span></li>
                                     </ul>
                                     <div class="bars">
                                         <div class="bar-group" ng-repeat="pro in programming">
-                                            <div class="bar bar-{[{$index + 1}]} stat-1" style="height: {[{pro.PScore}]}%"></div>
+                                            <div class="bar bar-{{$index + 1}} stat-1" style="height: {{pro.PScore}}%"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div id="design-graph" style="display: none">
                                     <ul class="x-axis">
-                                        <li ng-repeat="design in designs"><span>{[{design.DName}]}</span></li>
+                                        <li ng-repeat="design in designs"><span>{{design.DName}}</span></li>
                                     </ul>
                                     <ul class="y-axis">
-                                        <li ng-repeat="level in levels"><span>{[{level.level}]}</span></li>
+                                        <li ng-repeat="level in levels"><span>{{level.level}}</span></li>
                                     </ul>
                                     <div class="bars">
                                         <div class="bar-group" ng-repeat="design in designs">
-                                            <div class="bar bar-{[{$index + 1}]} stat-1" style="height: {[{design.DScore}]}%"></div>
+                                            <div class="bar bar-{{$index + 1}} stat-1" style="height: {{design.DScore}}%"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div id="lang-graph" style="display: none">
                                     <ul class="x-axis-3">
-                                        <li ng-repeat="lang in languages"><span>{[{lang.Language}]}</span></li>
+                                        <li ng-repeat="lang in languages"><span>{{lang.Language}}</span></li>
                                     </ul>
                                     <ul class="y-axis">
-                                        <li ng-repeat="level in lang_levels"><span>{[{level.level}]}</span></li>
+                                        <li ng-repeat="level in lang_levels"><span>{{level.level}}</span></li>
                                     </ul>
                                     <div class="bars">
                                         <div class="bar-group-3" ng-repeat="lang in languages">
-                                            <div class="bar bar-{[{$index + 1}]} stat-1" style="height: {[{lang.Proficiency}]}%"></div>
+                                            <div class="bar bar-{{$index + 1}} stat-1" style="height: {{lang.Proficiency}}%"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -267,11 +267,11 @@
             <a href="#" class="back back-right"><span class="fa fa-home" style="pointer-events:none"></span></a>
             <div class="KW_progressContainer">
                 <p class="bubble ripple-effect menu-bubble active-bubble" id="intro-bubble">ABOUT</p>
-                <div class="dot-container" ng-repeat="i in [1, 2, 3, 4]"><div class="progress-dots" id="dot-{[{i}]}"></div></div>
+                <div class="dot-container" ng-repeat="i in [1, 2, 3, 4]"><div class="progress-dots" id="dot-{{i}}"></div></div>
                 <p class="bubble ripple-effect menu-bubble" id="skills-bubble">SKILLS</p>
-                <div class="dot-container" ng-repeat="i in [5,6,7,8]"><div class="progress-dots" id="dot-{[{i}]}"></div></div>
+                <div class="dot-container" ng-repeat="i in [5,6,7,8]"><div class="progress-dots" id="dot-{{i}}"></div></div>
                 <p class="bubble ripple-effect menu-bubble" id="experiences-bubble">EXPERIENCES</p>
-                <div class="dot-container" ng-repeat="i in [9,10,11,12]"><div class="progress-dots" id="dot-{[{i}]}"></div></div>
+                <div class="dot-container" ng-repeat="i in [9,10,11,12]"><div class="progress-dots" id="dot-{{i}}"></div></div>
                 <p class="bubble ripple-effect menu-bubble" id="contact-bubble">CONTACT</p>
             </div>
             

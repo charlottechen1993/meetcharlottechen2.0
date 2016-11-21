@@ -240,7 +240,7 @@ a {
     }
 }
 
-#intro-title, #skills-title, #contact-title{
+#intro-title, #skills-title, #contact-title, #ex-title{
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size:100px;
@@ -401,7 +401,7 @@ a {
 /* EXPERIENCE */
 /* ---------- */
 #experiences-section{
-    display: flex;
+/*    display: flex;*/
 }
 
 #left-work{
@@ -489,6 +489,10 @@ a {
 /* ---------- */
 /* CONTACT ME */
 /* ---------- */
+input:-webkit-autofill {
+    background-color: white !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
 
 #contact-section{
     float: left;
@@ -555,10 +559,6 @@ label{
 .form-control:-moz-placeholder { color: black; }
 .form-control::-moz-placeholder { color: black; }
 .form-control:-ms-input-placeholder { color: black; }
-
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px #E8F3F3 inset !important;
-}
 
 .btn-email{
     background-color: #c6ac73;
