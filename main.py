@@ -22,7 +22,7 @@ class MainHandler(webapp2.RequestHandler):
         params = {
         }
         render_template(self, 'index.html', params)
-        
+#        
 class ContactHandler(webapp2.RequestHandler):
     def get(self):
         params = {
@@ -31,21 +31,22 @@ class ContactHandler(webapp2.RequestHandler):
         render_template(self, 'index.html', params)
         
     def post(self):
+        print "hello"
         sender_email = self.request.get('email')
         subject = self.request.get('subject')
         content = self.request.get('content')
-        mail.send_mail(sender="charlottechen21@gmail.com", 
+        mail.send_mail(sender="anything@meetcharlottechen2.appspotmail.com", 
                        to="charlottechen21@gmail.com", 
                        subject=subject, 
                        body="Email from: " + sender_email + "\n\n" + content)
-        render_template(self, 'index.html', {})
+#        render_template(self, 'index.html', {})
         self.redirect('/')
         
         
 ###############################################################################
 mappings = [
 	('/', MainHandler),
-    ('/', ContactHandler),
+    ('/contact', ContactHandler),
 ]
 app = webapp2.WSGIApplication(mappings, debug=True)
 
